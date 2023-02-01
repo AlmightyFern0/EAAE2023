@@ -387,14 +387,14 @@ button:hover {
     bottom: 30px;
   }
   .main-wrapper .topics .container .card .first-card {
-    background-image: url("/resources/yellow.svg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/yellow.svg");
     background-color: #000000;
   }
   .main-wrapper .topics .container .card .second-card {
-    background-image: url("/resources/blue.svg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/blue.svg");
   }
   .main-wrapper .topics .container .card .third-card {
-    background-image: url("/resources/white.svg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/white.svg");
   }
   .main-wrapper .topics .container .yellow {
     background: #FFFF00;

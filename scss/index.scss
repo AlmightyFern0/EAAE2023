@@ -30,7 +30,6 @@ $fontTiny: 0.5rem;
 
 html {
     line-height: 1.15;
-    height: 200vh;
     overflow-x: hidden;
 }
 
@@ -228,7 +227,7 @@ button:hover {
     }
 
     .fullOverlay {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         height: 100%;
@@ -436,7 +435,6 @@ button:hover {
             border: 3px solid $accentColor;
             padding-left: 20%;
             padding-right: 20%;
-            height: auto;
             padding-bottom: 10%;
             justify-content: center;
             align-items: center;
@@ -534,6 +532,7 @@ button:hover {
     }
 
     .fullOverlay {
+        position: absolute;
         visibility: hidden;
         pointer-events: none;
     }

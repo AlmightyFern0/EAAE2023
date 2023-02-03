@@ -290,8 +290,180 @@ button:hover {
 
         //Carousel 2nd section
 
-        .topics {
+        .container {
+            display: flex;
+            gap: 5vw;
+            height: 100%;
+            width: 100vw;
+            padding: 30px;
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            scroll-padding: 30px;
+        
+            .card {
+                display: flex;
+                flex: 0 0 65vw;
+                max-width: 1120px;
+                flex-direction: row;
+                background: $mainColor;
+                scroll-snap-align: center;
+                border: 3px solid $accentColor;
+                
+                .image {
+                    height: calc(100% + 6px);
+                    width: calc(33% + 6px);
+                    border: 3px solid $accentColor;
+                    transform: translateX(-3px) translateY(-3px);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: $mainColor;
+                }
+
+                .card-right {
+                    position: relative;
+                    padding: 30px;
+                    max-width: 66%;
+                    height: 100%;
+
+                    h2 {
+                        font-size: $fontNormal;
+                        margin-top: 30px;
+                        color: $accentColor;
+                    }
+
+                    p {
+                        font-size: $fontTiny;
+                        color: $accentColor;
+                    }
+
+                    button {
+                        position: absolute;
+                        bottom: 30px;
+                    }
+                }
+
+                .first-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/yellow.svg'); background-color: $accentColor;}
+
+                .second-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/blue.svg');}
+
+                .third-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/white.svg');}
+            }
+
+            .card-square {
+                position: relative;
+                display: flex;
+                flex: 0 0 30vh;
+                height: 30vh;
+                width: 30vh;
+                padding: 30px;
+                flex-direction: row;
+                background: $mainColor;
+                scroll-snap-align: center;
+                border: 3px solid $accentColor;
+
+
+                h2 {
+                    font-size: $fontNormal;
+                    margin-top: 30px;
+                    color: $accentColor;
+                    font-size: $fontBig;
+                }
+
+                p {
+                    font-size: $fontTiny;
+                    color: $accentColor;
+                }
+
+                button {
+                    position: absolute;
+                    bottom: 30px;
+                }
+            }
+
+            .temp {
+                color: $accentColor;
+                position: absolute;
+                bottom: 10vh;
+                left: 46.5%;
+            }
+
+            .card-speaker {
+                position: relative;
+                display: flex;
+                flex: 0 0 30vh;
+                height: 350px;
+                width: 300px;
+                flex-direction: column;
+                background: $mainColor;
+                scroll-snap-align: center;
+                border: 3px solid $accentColor;
+
+                .image {
+                    height: 300px;
+                    width: 300px;
+                    border: 3px solid $accentColor;
+                    transform: translateX(-3px) translateY(-3px);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: $mainColor;
+                    background-size: cover;
+                    filter: grayscale(100%);
+                }
+
+                .card-bottom {
+                    position: relative;
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+
+
+                    h2 {
+                        font-size: $fontNormal;
+                        width: 66%;
+                        margin-left: 15px;
+                        margin-top: 11px;
+                        color: $accentColor;
+                    }
+
+                    p {
+                        font-size: $fontTiny;
+                        color: $accentColor;
+                    }
+
+                    button {
+                        position: absolute;
+                        top: -6px;
+                        right: -3px;
+                        height: calc(50px + 3px);
+                    }
+                }
+
+                .falseMirror {background-image: url('/resources/False\ Mirror\ Office.jpeg');}
+
+                .paesaggi {background-image: url('/resources/paesaggisensibili.jpeg');}
+
+                .fosbury {background-image: url('/resources/Fosbury\ Architecture.jpeg');}
+
+                .seppie {background-image: url('/resources/rivoluzione\ delle\ seppie.jpg');}
+            }
+
+            .yellow {background: $tertiaryColor;}
+
+            .blue {
+                background: $secondaryColor;
+                
+                
+                .card-right {
+                    h2 {color: $mainColor;}
+                    p {color: $mainColor;}
+                }
+            }
+        }
+
+        .topics, .news, .speakers {
         margin: 0;
+        
 
             ::-webkit-scrollbar {
                 height: 11px;
@@ -304,79 +476,9 @@ button:hover {
             ::-webkit-scrollbar-thumb:hover {
                 background: $accentColor;
             }
-
-            .container {
-                display: flex;
-                gap: 5vw;
-                height: 100%;
-                width: 100vw;
-                padding: 30px;
-                scroll-snap-type: x mandatory;
-                overflow-x: scroll;
-                scroll-padding: 30px;
-            
-                .card {
-                    display: flex;
-                    flex: 0 0 65vw;
-                    max-width: 1120px;
-                    flex-direction: row;
-                    background: $mainColor;
-                    scroll-snap-align: center;
-                    border: 3px solid $accentColor;
-                    
-                    .image {
-                        height: calc(100% + 6px);
-                        width: calc(33% + 6px);
-                        border: 3px solid $accentColor;
-                        transform: translateX(-3px) translateY(-3px);
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-color: $mainColor;
-                    }
-
-                    .card-right {
-                        position: relative;
-                        padding: 30px;
-                        max-width: 66%;
-                        height: 100%;
-
-                        h2 {
-                            font-size: $fontNormal;
-                            margin-top: 30px;
-                            color: $accentColor;
-                        }
-
-                        p {
-                            font-size: $fontTiny;
-                            color: $accentColor;
-                        }
-
-                        button {
-                            position: absolute;
-                            bottom: 30px;
-                        }
-                    }
-
-                    .first-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/yellow.svg'); background-color: $accentColor;}
-
-                    .second-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/blue.svg');}
-
-                    .third-card {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/white.svg');}
-                }
-
-                .yellow {background: $tertiaryColor;}
-
-                .blue {
-                    background: $secondaryColor;
-                    
-                    
-                    .card-right {
-                        h2 {color: $mainColor;}
-                        p {color: $mainColor;}
-                    }
-                }
-            }
         }
+
+        .boxed {border: 3px solid $accentColor;}
 
         .modal-container {
             position: fixed;
@@ -455,13 +557,19 @@ button:hover {
             padding-bottom: 0;
         }
 
-        /*.news {
-            
-        }*/
+        .news {
+            position: relative;
+            top:-3px;
+            justify-content: center;
+            align-items: center;
+        }
 
-        /*.speakers {
-            background-color: $tertiaryColor;
-        }*/
+        .speakers {
+            background: $tertiaryColor;
+            position: relative;
+            top: -3px;
+            justify-content: center;
+        }
 
         .sponsors {
             border: 3px solid $accentColor;
@@ -470,6 +578,8 @@ button:hover {
             align-content: center;
             padding-top: 40px;
             height: 90vh;
+            position: relative;
+            top: -3px;
 
             a {
                 align-self: center;
@@ -612,6 +722,41 @@ button:hover {
                 }
             }
         }
+    }
+}
+
+//Footer
+
+footer {
+    
+    .partners {
+        position: relative;
+        top: -6px;
+        width: 100vw;
+        height: 80px;
+        padding: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 3px solid $accentColor;
+
+        .foot {
+            height: 100%;
+            margin-right: 50px;
+        }
+    }
+    
+    .copyright {
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: fit-content;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: $fontTiny;
     }
 }
 

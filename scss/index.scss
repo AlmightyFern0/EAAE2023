@@ -108,7 +108,7 @@ button:hover {
         flex-flow: row nowrap;
         height: 2.75rem;
         margin: 0;
-        max-width: 1440px;
+        max-width: 928px;
         padding: 0;
         border: 3px solid $accentColor;
         background-color: $mainColor;
@@ -263,6 +263,7 @@ button:hover {
         left: 0;
         padding: 0;
         width: 100vw;
+        height: fit-content;
 
         section {
             position: relative;
@@ -639,7 +640,20 @@ button:hover {
                 }
             }
         }
+
+        .main-text {
+            position: relative;
+            background-color: $mainColor;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
     }
+    
+    .highlight {color: $secondaryColor;}
 
     .fullOverlay {
         position: absolute;

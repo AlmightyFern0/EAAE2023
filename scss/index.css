@@ -111,7 +111,7 @@ button:hover {
           flex-flow: row nowrap;
   height: 2.75rem;
   margin: 0;
-  max-width: 1440px;
+  max-width: 928px;
   padding: 0;
   border: 3px solid #000000;
   background-color: #FFFFFF;
@@ -289,6 +289,9 @@ button:hover {
     left: 0;
     padding: 0;
     width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .main-wrapper section {
     position: relative;
@@ -704,6 +707,24 @@ button:hover {
     position: absolute;
     bottom: 30px;
     left: 30px;
+  }
+  .main-wrapper .main-text {
+    position: relative;
+    background-color: #FFFFFF;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .highlight {
+    color: #0000FF;
   }
   .fullOverlay {
     position: absolute;

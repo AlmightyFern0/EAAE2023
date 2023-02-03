@@ -440,13 +440,13 @@ button:hover {
                     }
                 }
 
-                .falseMirror {background-image: url('/resources/False\ Mirror\ Office.jpeg');}
+                .falseMirror {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/False\ Mirror\ Office.jpeg');}
 
-                .paesaggi {background-image: url('/resources/paesaggisensibili.jpeg');}
+                .paesaggi {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/paesaggisensibili.jpeg');}
 
-                .fosbury {background-image: url('/resources/Fosbury\ Architecture.jpeg');}
+                .fosbury {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/Fosbury\ Architecture.jpeg');}
 
-                .seppie {background-image: url('/resources/rivoluzione\ delle\ seppie.jpg');}
+                .seppie {background-image: url('http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/rivoluzione\ delle\ seppie.jpg');}
             }
 
             .yellow {background: $tertiaryColor;}
@@ -548,6 +548,8 @@ button:hover {
 
                 u {color: $mainColor;}
             }
+
+            button {height: 2.75rem;}
 
             .abstractsTitle {
                 font-size: 6rem;
@@ -653,6 +655,84 @@ button:hover {
         }
     }
     
+    .formSection {
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        display: flex;
+
+        form {
+            align-self: center;
+            width: 100%;
+            padding-left: 20%;
+            padding-right: 20%;
+            
+            fieldset {
+                margin: 2em 0;
+                padding: 1em 2em;
+                border: none;
+            }
+
+            legend {
+                font-size: 1.25em;
+                margin-left: -25px;
+            }
+
+            label {
+                display: block;
+                margin-top: 0.5em;
+                color: $accentColor;
+            }
+
+            input {
+                padding: 0.5em;
+                border: 3px solid $accentColor;
+            }
+
+            input[type="email"], input[type="text"] {width: 15em;}
+
+            textarea {
+                min-height: 8em;
+                min-width: 100%;
+                padding: .5em;
+                border: 3px solid $accentColor;
+            }
+
+            .checks {
+                margin-bottom: 1em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            input[type="checkbox"] + label{
+                display: inline-block;
+                padding-top: 0;
+                margin-top: 0;
+            }
+
+            input[type="submit"] {
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 0.375rem 1rem;
+                height: 2.75rem;
+                transition: all 0.2s ease-in;
+                background-color: $mainColor;
+                cursor: pointer;
+                border: 3px solid $accentColor;
+                width: -moz-fit-content;
+                width: fit-content;
+            }
+
+            input[type="submit"]:hover {
+                background-color: $accentColor;
+                color: $mainColor;
+            }
+        }
+    }
+
     .highlight {color: $secondaryColor;}
 
     .fullOverlay {

@@ -14,7 +14,7 @@
   <!-- FontAwesome CSS -->
   <link rel="stylesheet" href="https://kit.fontawesome.com/d25d8e766e.css" crossorigin="anonymous">
   <!-- Theme CSS -->
-  <link rel="stylesheet" href="/scss/index.css">
+  <link rel="stylesheet" href="scss/index.css">
 </head>
 <body>
   <script>
@@ -39,6 +39,17 @@
               lastScroll = scrollValue;
           })
   </script>
+  <div class="fullOverlay">
+    <div class="fullOverlayInner">
+        <h1>Hey!</h1>
+        <br>
+        <p>If you're reading this it means that the mobile codebase is not fully working or we're still in the submissions period, you're invited to use a computer.</p>
+        <p>We deeply apologize for this inconvenience but I'm working alone on this website and I'm still in the early stages</p>
+        <br>
+        <p>Thanks for your patience,</p>
+        <h2>Lorenzo Marcomin</h2>
+    </div>
+</div>
   <header class="header">
           <div id="navigation" class="navbar">
               <div class="nav-logo">
@@ -198,6 +209,44 @@
         will be also possible to update the authors&apos; list, the title, the abstract, and the keywords of
         the contribution.</p>
     </section>
+
+    <section class="formSection">
+      <form action="#" method="post">
+        <fieldset>
+          <legend><h2>Submit your abstract</h2></legend>
+
+          <label for="fullName">Your name</label>
+          <input type="text" name="fullName" id="fullName">
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+
+          <label for="abstractTitle">Abstract Title</label>
+          <input type="text" name="abstractTitle" id="abstractTitle">
+
+          <label for="abstract">Your Abstract</label>
+          <textarea name="abstract" id="abstract" cols="30" rows="10"></textarea>
+
+          <div class="checks">
+            <input type="checkbox" name="copyEmail" id="copyEmail">
+            <label for="copyEmail">Send copy to my email</label>
+          </div>
+
+          <input type="submit" id="submit" value="Submit">
+        </fieldset>
+      </form>
+    </section>
   </div>
+
+  <footer>
+    <div class="partners">
+        <a href=""><img class="foot" src="resources/Logo EAAE.png" alt="logo EAAE"></a>
+        <a href=""><img class="foot" src="resources/Polito logo full [black].png" alt="logo polito"></a>
+        <a href=""><img class="foot" src="resources/Logo DAD copia.png" alt="logo DAD"></a>
+    </div>
+    <div class="copyright">
+        <b>&copy; 2023 EAAE European Association for Architectural Education</b>
+    </div>
+</footer>
 </body>
 </html>

@@ -93,9 +93,9 @@
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Call</a>
+                    <a class="nav-link" href="call_abstracts.html">Call</a>
                     <div class="dropdown-content">
-                        <a href="/call_abstracts.html">Call for Abstracts</a>
+                        <a href="call_abstracts.html">Call for Abstracts</a>
                     </div>
                 </li>
                 <li class="nav-item disabled">
@@ -206,50 +206,6 @@
             </div>
         </section>
 
-        <!-- I know it's dumb but I was required to create the first version in less than a week, please have mercy of my poor soul this will be fixed shortly -Lorenzo Marcomin -->
-        <script>
-            const open = document.getElementById('open');
-            const modal_Container = document.getElementById('modalContainer');
-            const close = document.getElementById('close');
-            const open2 = document.getElementById('open2');
-            const modal_Container2 = document.getElementById('modalContainer2');
-            const close2 = document.getElementById('close2');
-            const open3 = document.getElementById('open3');
-            const modal_Container3 = document.getElementById('modalContainer3');
-            const close3 = document.getElementById('close3');
-            const open4 = document.getElementById('open4');
-            const modal_Container4 = document.getElementById('modalContainer4');
-            const close4 = document.getElementById('close4');
-            
-
-            open.addEventListener('click', () => {
-                modal_Container.classList.add("show");
-            });
-            close.addEventListener('click', () => {
-                modal_Container.classList.remove("show");
-            });
-            open2.addEventListener('click', () => {
-                modal_Container2.classList.add("show");
-            });
-            close2.addEventListener('click', () => {
-                modal_Container2.classList.remove("show");
-            });
-            open3.addEventListener('click', () => {
-                modal_Container3.classList.add("show");
-            });
-            close3.addEventListener('click', () => {
-                modal_Container3.classList.remove("show");
-            });
-            open4.addEventListener('click', () => {
-                modal_Container4.classList.add("show");
-                body.classList.add("noScroll");
-            });
-            close4.addEventListener('click', () => {
-                modal_Container4.classList.remove("show");
-                body.classList.remove("noScroll");
-            });
-        </script>
-
         <!-- Work in progress -->
 
         <section class="news boxed">
@@ -260,8 +216,50 @@
                 </div>
 
                 <div class="card-square">
-                    <h2>Lorem ipsum dolor sit amet</h2>
-                    <button>read more</button>
+                    <h2>Important dates</h2>
+                    <button id="open5">read more</button>
+                </div>
+                <div class="modal-container modal-prompt modal-white" id="modalContainer5">
+                    <div class="modal">
+                        <h1><u>Important dates</u></h1>
+                        <h2>6 february 2023</h2>
+                        <p>Launch of the Conference</p>
+                        <br>
+                        <h2>13 february 2023</h2>
+                        <p>Opening of the <b class="highlight">call for abstract</b></p>
+                        <br>
+                        <h2>31 March 2023</h2>
+                        <p>Abstract submission deadline</b></p>
+                        <br>
+                        <h2>31 March 2023</h2>
+                        <p>Opening of the registration for the conference</b></p>
+                        <br>
+                        <h2>29 May 2023</h2>
+                        <p>Notification of approved abstracts with review</b></p>
+                        <br>
+                        <h2>30 June 2023</h2>
+                        <p>Deadline for <b class="highlight">early bird registration</b> for the conference</b></p>
+                        <br>
+                        <h2>1st August 2023</h2>
+                        <p>Deadline for the <b class="highlight">registration</b> for the conference</p>
+                        <br>
+                        <h2>30 August - 1st September 2023</h2>
+                        <p><b class="highlight">Conference</b></p>
+                        <br>
+                        <h2>2 September 2023</h2>
+                        <p><b class="highlight">Excursions</b></p>
+                        <br>
+                        <h2>2 September 2023</h2>
+                        <p>Deadline <b class="highlight">full paper submission</b> for blind review</p>
+                        <br>
+                        <h2>8 January 2024</h2>
+                        <p>Notification of approved papers with review</p>
+                        <br>
+                        <h2>23 February 2024</h2>
+                        <p>Deadline <b class="highlight">final revised paper submission</b></p>
+                        <br>
+                        <button id="close5">close</button>
+                    </div>
                 </div>
 
                 <div class="card-square">
@@ -398,5 +396,60 @@
             <b>&copy; 2023 EAAE European Association for Architectural Education</b>
         </div>
     </footer>
+
+    <!-- I know it's dumb but I was required to create the first version in less than a week, please have mercy of my poor soul this will be fixed shortly -Lorenzo Marcomin -->
+    <script>
+        const open = document.getElementById('open');
+        const modal_Container = document.getElementById('modalContainer');
+        const close = document.getElementById('close');
+        const open2 = document.getElementById('open2');
+        const modal_Container2 = document.getElementById('modalContainer2');
+        const close2 = document.getElementById('close2');
+        const open3 = document.getElementById('open3');
+        const modal_Container3 = document.getElementById('modalContainer3');
+        const close3 = document.getElementById('close3');
+        const open4 = document.getElementById('open4');
+        const modal_Container4 = document.getElementById('modalContainer4');
+        const close4 = document.getElementById('close4');
+        const open5 = document.getElementById('open5');
+        const modal_Container5 = document.getElementById('modalContainer5');
+        const close5 = document.getElementById('close5');
+        
+
+        open.addEventListener('click', () => {
+            modal_Container.classList.add("show");
+        });
+        close.addEventListener('click', () => {
+            modal_Container.classList.remove("show");
+        });
+        open2.addEventListener('click', () => {
+            modal_Container2.classList.add("show");
+        });
+        close2.addEventListener('click', () => {
+            modal_Container2.classList.remove("show");
+        });
+        open3.addEventListener('click', () => {
+            modal_Container3.classList.add("show");
+        });
+        close3.addEventListener('click', () => {
+            modal_Container3.classList.remove("show");
+        });
+        open4.addEventListener('click', () => {
+            modal_Container4.classList.add("show");
+            body.classList.add("noScroll");
+        });
+        close4.addEventListener('click', () => {
+            modal_Container4.classList.remove("show");
+            body.classList.remove("noScroll");
+        });
+        open5.addEventListener('click', () => {
+            modal_Container5.classList.add("show");
+            body.classList.add("noScroll");
+        });
+        close5.addEventListener('click', () => {
+            modal_Container5.classList.remove("show");
+            body.classList.remove("noScroll");
+        });
+    </script>
 </body>
 </html>

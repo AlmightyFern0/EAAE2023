@@ -480,16 +480,16 @@ button:hover {
     height: calc(50px + 3px);
   }
   .main-wrapper .container .card-speaker .falseMirror {
-    background-image: url("/resources/False Mirror Office.jpeg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/False Mirror Office.jpeg");
   }
   .main-wrapper .container .card-speaker .paesaggi {
-    background-image: url("/resources/paesaggisensibili.jpeg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/paesaggisensibili.jpeg");
   }
   .main-wrapper .container .card-speaker .fosbury {
-    background-image: url("/resources/Fosbury Architecture.jpeg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/Fosbury Architecture.jpeg");
   }
   .main-wrapper .container .card-speaker .seppie {
-    background-image: url("/resources/rivoluzione delle seppie.jpg");
+    background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/rivoluzione delle seppie.jpg");
   }
   .main-wrapper .container .yellow {
     background: #FFFF00;
@@ -604,6 +604,9 @@ button:hover {
   }
   .main-wrapper .prompt h2 u {
     color: #FFFFFF;
+  }
+  .main-wrapper .prompt button {
+    height: 2.75rem;
   }
   .main-wrapper .prompt .abstractsTitle {
     font-size: 6rem;
@@ -722,6 +725,84 @@ button:hover {
     margin: 0;
     padding-left: 20%;
     padding-right: 20%;
+  }
+  .formSection {
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .formSection form {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .formSection form fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: none;
+  }
+  .formSection form legend {
+    font-size: 1.25em;
+    margin-left: -25px;
+  }
+  .formSection form label {
+    display: block;
+    margin-top: 0.5em;
+    color: #000000;
+  }
+  .formSection form input {
+    padding: 0.5em;
+    border: 3px solid #000000;
+  }
+  .formSection form input[type="email"], .formSection form input[type="text"] {
+    width: 15em;
+  }
+  .formSection form textarea {
+    min-height: 8em;
+    min-width: 100%;
+    padding: .5em;
+    border: 3px solid #000000;
+  }
+  .formSection form .checks {
+    margin-bottom: 1em;
+  }
+  .formSection form .checks p {
+    margin-bottom: 0;
+  }
+  .formSection form input[type="checkbox"] + label {
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .formSection form input[type="submit"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.375rem 1rem;
+    height: 2.75rem;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 3px solid #000000;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+  }
+  .formSection form input[type="submit"]:hover {
+    background-color: #000000;
+    color: #FFFFFF;
   }
   .highlight {
     color: #0000FF;

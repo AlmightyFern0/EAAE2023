@@ -289,12 +289,6 @@ button:hover {
     left: 0;
     padding: 0;
     width: 100vw;
-    /*.news {
-            
-        }*/
-    /*.speakers {
-            background-color: $tertiaryColor;
-        }*/
   }
   .main-wrapper section {
     position: relative;
@@ -315,19 +309,7 @@ button:hover {
     margin: auto;
     height: 100%;
   }
-  .main-wrapper .topics {
-    margin: 0;
-  }
-  .main-wrapper .topics ::-webkit-scrollbar {
-    height: 11px;
-  }
-  .main-wrapper .topics ::-webkit-scrollbar-thumb {
-    background: #D5D5D5;
-  }
-  .main-wrapper .topics ::-webkit-scrollbar-thumb:hover {
-    background: #000000;
-  }
-  .main-wrapper .topics .container {
+  .main-wrapper .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -340,7 +322,7 @@ button:hover {
     overflow-x: scroll;
     scroll-padding: 30px;
   }
-  .main-wrapper .topics .container .card {
+  .main-wrapper .container .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -356,7 +338,7 @@ button:hover {
     scroll-snap-align: center;
     border: 3px solid #000000;
   }
-  .main-wrapper .topics .container .card .image {
+  .main-wrapper .container .card .image {
     height: calc(100% + 6px);
     width: calc(33% + 6px);
     border: 3px solid #000000;
@@ -366,46 +348,172 @@ button:hover {
     background-position: center;
     background-color: #FFFFFF;
   }
-  .main-wrapper .topics .container .card .card-right {
+  .main-wrapper .container .card .card-right {
     position: relative;
     padding: 30px;
     max-width: 66%;
     height: 100%;
   }
-  .main-wrapper .topics .container .card .card-right h2 {
+  .main-wrapper .container .card .card-right h2 {
     font-size: 1rem;
     margin-top: 30px;
     color: #000000;
   }
-  .main-wrapper .topics .container .card .card-right p {
+  .main-wrapper .container .card .card-right p {
     font-size: 0.5rem;
     color: #000000;
   }
-  .main-wrapper .topics .container .card .card-right button {
+  .main-wrapper .container .card .card-right button {
     position: absolute;
     bottom: 30px;
   }
-  .main-wrapper .topics .container .card .first-card {
+  .main-wrapper .container .card .first-card {
     background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/yellow.svg");
     background-color: #000000;
   }
-  .main-wrapper .topics .container .card .second-card {
+  .main-wrapper .container .card .second-card {
     background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/blue.svg");
   }
-  .main-wrapper .topics .container .card .third-card {
+  .main-wrapper .container .card .third-card {
     background-image: url("http://lorenzomarcomin.com/wp-content/themes/twentytwentyone/assets/images/white.svg");
   }
-  .main-wrapper .topics .container .yellow {
+  .main-wrapper .container .card-square {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30vh;
+            flex: 0 0 30vh;
+    height: 30vh;
+    width: 30vh;
+    padding: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: #FFFFFF;
+    scroll-snap-align: center;
+    border: 3px solid #000000;
+  }
+  .main-wrapper .container .card-square h2 {
+    font-size: 1rem;
+    margin-top: 30px;
+    color: #000000;
+    font-size: 2rem;
+  }
+  .main-wrapper .container .card-square p {
+    font-size: 0.5rem;
+    color: #000000;
+  }
+  .main-wrapper .container .card-square button {
+    position: absolute;
+    bottom: 30px;
+  }
+  .main-wrapper .container .temp {
+    color: #000000;
+    position: absolute;
+    bottom: 10vh;
+    left: 46.5%;
+  }
+  .main-wrapper .container .card-speaker {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30vh;
+            flex: 0 0 30vh;
+    height: 350px;
+    width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #FFFFFF;
+    scroll-snap-align: center;
+    border: 3px solid #000000;
+  }
+  .main-wrapper .container .card-speaker .image {
+    height: 300px;
+    width: 300px;
+    border: 3px solid #000000;
+    -webkit-transform: translateX(-3px) translateY(-3px);
+            transform: translateX(-3px) translateY(-3px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFFFFF;
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  .main-wrapper .container .card-speaker .card-bottom {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .main-wrapper .container .card-speaker .card-bottom h2 {
+    font-size: 1rem;
+    width: 66%;
+    margin-left: 15px;
+    margin-top: 11px;
+    color: #000000;
+  }
+  .main-wrapper .container .card-speaker .card-bottom p {
+    font-size: 0.5rem;
+    color: #000000;
+  }
+  .main-wrapper .container .card-speaker .card-bottom button {
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    height: calc(50px + 3px);
+  }
+  .main-wrapper .container .card-speaker .falseMirror {
+    background-image: url("/resources/False Mirror Office.jpeg");
+  }
+  .main-wrapper .container .card-speaker .paesaggi {
+    background-image: url("/resources/paesaggisensibili.jpeg");
+  }
+  .main-wrapper .container .card-speaker .fosbury {
+    background-image: url("/resources/Fosbury Architecture.jpeg");
+  }
+  .main-wrapper .container .card-speaker .seppie {
+    background-image: url("/resources/rivoluzione delle seppie.jpg");
+  }
+  .main-wrapper .container .yellow {
     background: #FFFF00;
   }
-  .main-wrapper .topics .container .blue {
+  .main-wrapper .container .blue {
     background: #0000FF;
   }
-  .main-wrapper .topics .container .blue .card-right h2 {
+  .main-wrapper .container .blue .card-right h2 {
     color: #FFFFFF;
   }
-  .main-wrapper .topics .container .blue .card-right p {
+  .main-wrapper .container .blue .card-right p {
     color: #FFFFFF;
+  }
+  .main-wrapper .topics, .main-wrapper .news, .main-wrapper .speakers {
+    margin: 0;
+  }
+  .main-wrapper .topics ::-webkit-scrollbar, .main-wrapper .news ::-webkit-scrollbar, .main-wrapper .speakers ::-webkit-scrollbar {
+    height: 11px;
+  }
+  .main-wrapper .topics ::-webkit-scrollbar-thumb, .main-wrapper .news ::-webkit-scrollbar-thumb, .main-wrapper .speakers ::-webkit-scrollbar-thumb {
+    background: #D5D5D5;
+  }
+  .main-wrapper .topics ::-webkit-scrollbar-thumb:hover, .main-wrapper .news ::-webkit-scrollbar-thumb:hover, .main-wrapper .speakers ::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
+  .main-wrapper .boxed {
+    border: 3px solid #000000;
   }
   .main-wrapper .modal-container {
     position: fixed;
@@ -500,6 +608,24 @@ button:hover {
   .main-wrapper .call {
     padding-bottom: 0;
   }
+  .main-wrapper .news {
+    position: relative;
+    top: -3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-wrapper .speakers {
+    background: #FFFF00;
+    position: relative;
+    top: -3px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .main-wrapper .sponsors {
     border: 3px solid #000000;
     display: -webkit-box;
@@ -513,6 +639,8 @@ button:hover {
         align-content: center;
     padding-top: 40px;
     height: 90vh;
+    position: relative;
+    top: -3px;
   }
   .main-wrapper .sponsors a {
     -ms-flex-item-align: center;
@@ -643,5 +771,51 @@ button:hover {
   .main-wrapper .sponsors .sponsor-container .velux-content h2 {
     font-size: 1rem;
   }
+}
+
+footer .partners {
+  position: relative;
+  top: -6px;
+  width: 100vw;
+  height: 80px;
+  padding: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid #000000;
+}
+
+footer .partners .foot {
+  height: 100%;
+  margin-right: 50px;
+}
+
+footer .copyright {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.5rem;
 }
 /*# sourceMappingURL=index.css.map */

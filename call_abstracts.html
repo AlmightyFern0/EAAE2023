@@ -1,3 +1,5 @@
+<?php include "sendmail.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,194 +51,543 @@
         <p>Thanks for your patience,</p>
         <h2>Lorenzo Marcomin</h2>
     </div>
-</div>
+  </div>
   <header class="header">
-          <div id="navigation" class="navbar">
-              <div class="nav-logo">
-                  <a href="index.html" title="navbar logo">
-                      <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.38583 113.38583">
-                          <defs>
-                            <style>
-                              .cls-1, .cls-2, .cls-3 {
-                                fill: none;
-                                stroke-miterlimit: 10;
-                              }
-                        
-                              .cls-1 {
-                                stroke-width: 3.89316px;
-                              }
-                        
-                              .cls-2 {
-                                stroke-width: 0.64886px;
-                              }
-                        
-                              .cls-3 {
-                                stroke-width: 1.29772px;
-                              }
-                            </style>
-                          </defs>
-                          <g id="Livello_1" data-name="Livello 1">
-                            <g>
-                              <g>
-                                <path d="M42.73057,62.48027a38.39417,38.39417,0,0,0-2.49023,3.72656,15.87055,15.87055,0,0,0-1.47852,4.2002,13.23873,13.23873,0,0,0-.26562,4.39941,22.14661,22.14661,0,0,0,.88867,3.53613H38.381q-.81446-1.89258-.99218-2.415a9.32808,9.32808,0,0,1-.32813-1.41992,10.49173,10.49173,0,0,1-.0918-2.623,13.24226,13.24226,0,0,1,.19922-1.37793,13.752,13.752,0,0,1,1.70215-4.374,34.53825,34.53825,0,0,1,2.82227-3.65234Z"/>
-                                <path d="M43.30284,72.08378a1.8953,1.8953,0,0,0,.13281,1.14551q.40724.72217,1.80176.72168a3.34979,3.34979,0,0,0,1.53906-.36035,1.55779,1.55779,0,0,0,.86719-1.11621.76077.76077,0,0,0-.32324-.87207,4.85513,4.85513,0,0,0-1.18653-.42285l-1.12109-.29883a4.64782,4.64782,0,0,1-1.54395-.63086,1.51209,1.51209,0,0,1-.60644-1.67773,3.288,3.288,0,0,1,1.34082-2.041,4.32264,4.32264,0,0,1,2.61035-.78125A2.73608,2.73608,0,0,1,49.462,66.92949a2.24059,2.24059,0,0,1,.19922,1.60937H48.2501a1.44964,1.44964,0,0,0-.166-.9209,1.88066,1.88066,0,0,0-1.66016-.58886,2.46321,2.46321,0,0,0-1.34863.32324,1.33855,1.33855,0,0,0-.61914.85449.84.84,0,0,0,.374.92969,2.77882,2.77882,0,0,0,.90528.36523l.9375.24121a6.22823,6.22823,0,0,1,2,.75489,1.64746,1.64746,0,0,1,.48242,1.80175,3.51573,3.51573,0,0,1-1.333,2.04981,4.56032,4.56032,0,0,1-2.92578.86328,3.05072,3.05072,0,0,1-2.61914-.90039,2.89627,2.89627,0,0,1-.41114-2.22852Z"/>
-                                <path d="M49.089,78.34257a38.65154,38.65154,0,0,0,2.49024-3.75195A15.93424,15.93424,0,0,0,53.048,70.407a13.29988,13.29988,0,0,0,.25781-4.39161,21.34241,21.34241,0,0,0-.88086-3.53515h1.00488q.84668,2.042,1.0127,2.51855a8.47417,8.47417,0,0,1,.30664,1.31543A9.66209,9.66209,0,0,1,54.878,68.365a11.97231,11.97231,0,0,1-.24414,1.95118A13.73973,13.73973,0,0,1,52.923,74.699a32.72072,32.72072,0,0,1-2.80469,3.64355Z"/>
-                              </g>
-                              <circle class="cls-1" cx="51.3167" cy="61.88392" r="29.72139"/>
-                              <rect class="cls-2" x="32.34774" y="21.78051" width="59.44278" height="59.44278"/>
-                              <rect class="cls-3" x="27.08642" y="27.04184" width="59.44278" height="59.44278"/>
-                            </g>
-                          </g>
-                      </svg>                      
-                  </a>
-              </div>
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Call</a>
-                      <div class="dropdown-content">
-                          <a href="#">Call for Abstracts</a>
-                      </div>
-                  </li>
-                  <li class="nav-item disabled">
-                      <a class="nav-link disabled" href="#">Schedule</a>
-                  </li>
-                  <li class="nav-item disabled">
-                      <a class="nav-link disabled" href="#">Organization</a>
-                  </li>
-                  <li class="nav-item disabled">
-                      <a class="nav-link disabled" href="#">Venue</a>
-                  </li>
-              </ul>
-              <a href="#"><button class="btn-variant btn-nav">Register</button></a>
-          </div>
+    <div id="navigation" class="navbar">
+        <div class="nav-logo">
+            <a href="index.html" title="navbar logo">
+                <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.38583 113.38583">
+                    <defs>
+                      <style>
+                        .cls-1, .cls-2, .cls-3 {
+                          fill: none;
+                          stroke-miterlimit: 10;
+                        }
+                  
+                        .cls-1 {
+                          stroke-width: 3.89316px;
+                        }
+                  
+                        .cls-2 {
+                          stroke-width: 0.64886px;
+                        }
+                  
+                        .cls-3 {
+                          stroke-width: 1.29772px;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Livello_1" data-name="Livello 1">
+                      <g>
+                        <g>
+                          <path d="M42.73057,62.48027a38.39417,38.39417,0,0,0-2.49023,3.72656,15.87055,15.87055,0,0,0-1.47852,4.2002,13.23873,13.23873,0,0,0-.26562,4.39941,22.14661,22.14661,0,0,0,.88867,3.53613H38.381q-.81446-1.89258-.99218-2.415a9.32808,9.32808,0,0,1-.32813-1.41992,10.49173,10.49173,0,0,1-.0918-2.623,13.24226,13.24226,0,0,1,.19922-1.37793,13.752,13.752,0,0,1,1.70215-4.374,34.53825,34.53825,0,0,1,2.82227-3.65234Z"/>
+                          <path d="M43.30284,72.08378a1.8953,1.8953,0,0,0,.13281,1.14551q.40724.72217,1.80176.72168a3.34979,3.34979,0,0,0,1.53906-.36035,1.55779,1.55779,0,0,0,.86719-1.11621.76077.76077,0,0,0-.32324-.87207,4.85513,4.85513,0,0,0-1.18653-.42285l-1.12109-.29883a4.64782,4.64782,0,0,1-1.54395-.63086,1.51209,1.51209,0,0,1-.60644-1.67773,3.288,3.288,0,0,1,1.34082-2.041,4.32264,4.32264,0,0,1,2.61035-.78125A2.73608,2.73608,0,0,1,49.462,66.92949a2.24059,2.24059,0,0,1,.19922,1.60937H48.2501a1.44964,1.44964,0,0,0-.166-.9209,1.88066,1.88066,0,0,0-1.66016-.58886,2.46321,2.46321,0,0,0-1.34863.32324,1.33855,1.33855,0,0,0-.61914.85449.84.84,0,0,0,.374.92969,2.77882,2.77882,0,0,0,.90528.36523l.9375.24121a6.22823,6.22823,0,0,1,2,.75489,1.64746,1.64746,0,0,1,.48242,1.80175,3.51573,3.51573,0,0,1-1.333,2.04981,4.56032,4.56032,0,0,1-2.92578.86328,3.05072,3.05072,0,0,1-2.61914-.90039,2.89627,2.89627,0,0,1-.41114-2.22852Z"/>
+                          <path d="M49.089,78.34257a38.65154,38.65154,0,0,0,2.49024-3.75195A15.93424,15.93424,0,0,0,53.048,70.407a13.29988,13.29988,0,0,0,.25781-4.39161,21.34241,21.34241,0,0,0-.88086-3.53515h1.00488q.84668,2.042,1.0127,2.51855a8.47417,8.47417,0,0,1,.30664,1.31543A9.66209,9.66209,0,0,1,54.878,68.365a11.97231,11.97231,0,0,1-.24414,1.95118A13.73973,13.73973,0,0,1,52.923,74.699a32.72072,32.72072,0,0,1-2.80469,3.64355Z"/>
+                        </g>
+                        <circle class="cls-1" cx="51.3167" cy="61.88392" r="29.72139"/>
+                        <rect class="cls-2" x="32.34774" y="21.78051" width="59.44278" height="59.44278"/>
+                        <rect class="cls-3" x="27.08642" y="27.04184" width="59.44278" height="59.44278"/>
+                      </g>
+                    </g>
+                </svg>                      
+            </a>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Call</a>
+                <!--<div class="dropdown-content">
+                    <a href="#">Call for Abstracts</a>
+                </div>-->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/schedule.html">Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/programme.html">Programme</a>
+            </li>
+            <li class="nav-item disabled">
+                <a class="nav-link disabled" href="#">Organization</a>
+            </li>
+            <!--<li class="nav-item disabled">
+                <a class="nav-link disabled" href="#">Organization</a>
+            </li>-->
+            <li class="nav-item disabled">
+                <a class="nav-link disabled" href="#">Venue</a>
+            </li>
+        </ul>
+        <a href="#"><button class="btn-variant btn-nav">Register</button></a>
+    </div>
   </header>
 
   <!-- Main wrapper -->
   <div class="main-wrapper">
     <section class="prompt call">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77165 226.77165">
+        <defs>
+          <style>
+            .cls-1Big, .cls-2Big, .cls-3Big {
+              fill: none;
+              stroke: #FFFFFF;
+              stroke-miterlimit: 10;
+            }
+      
+            .cls-1Big {
+              stroke-width: 9px;
+            }
+      
+            .cls-2Big {
+              stroke-width: 1.5px;
+            }
+      
+            .cls-3Big {
+              stroke-width: 3px;
+            }
+          </style>
+        </defs>
+        <g id="Livello_1" data-name="Livello 1">
+          <g>
+            <g>
+              <path d="M76.77822,136.51227a61.14161,61.14161,0,0,0-3.95508,5.91992,25.23531,25.23531,0,0,0-2.3457,6.6709,20.9875,20.9875,0,0,0-.42188,6.98731,35.06166,35.06166,0,0,0,1.41016,5.61621H69.87q-1.292-3.00587-1.57519-3.83692a14.81964,14.81964,0,0,1-.52051-2.2539,16.618,16.618,0,0,1-.14453-4.166,19.986,19.986,0,0,1,.31641-2.18847,21.81816,21.81816,0,0,1,2.70215-6.94825,55.20354,55.20354,0,0,1,4.48242-5.80078Z"/>
+              <path d="M77.68837,151.76618a3.00627,3.00627,0,0,0,.21094,1.81933q.646,1.147,2.86035,1.14747a5.31426,5.31426,0,0,0,2.44629-.57422,2.47784,2.47784,0,0,0,1.37793-1.77344,1.21178,1.21178,0,0,0-.51465-1.38379,7.77426,7.77426,0,0,0-1.88574-.67285l-1.7793-.47461a7.35957,7.35957,0,0,1-2.45214-1.00195,2.39414,2.39414,0,0,1-.96192-2.66211,5.22149,5.22149,0,0,1,2.12891-3.24414,6.87119,6.87119,0,0,1,4.14648-1.23828q3.189,0,4.20508,1.87109a3.56493,3.56493,0,0,1,.31641,2.55859H85.5458a2.30549,2.30549,0,0,0-.26368-1.46386q-.61962-.936-2.63671-.93653a3.91473,3.91473,0,0,0-2.14258.51465,2.11848,2.11848,0,0,0-.98145,1.3584,1.33014,1.33014,0,0,0,.59278,1.47656,4.45415,4.45415,0,0,0,1.43652.58008l1.49023.38184a9.92717,9.92717,0,0,1,3.17774,1.20019,2.612,2.612,0,0,1,.76367,2.86035,5.58927,5.58927,0,0,1-2.11523,3.25684,7.259,7.259,0,0,1-4.64747,1.37109q-3.15087,0-4.15918-1.43066a4.586,4.586,0,0,1-.65234-3.54Z"/>
+              <path d="M86.87685,161.70661a61.18763,61.18763,0,0,0,3.95508-5.959,25.30162,25.30162,0,0,0,2.334-6.64453,21.12587,21.12587,0,0,0,.40821-6.97363,34.01355,34.01355,0,0,0-1.39649-5.61719h1.59473q1.34472,3.24317,1.6084,4.002a13.52549,13.52549,0,0,1,.48828,2.08984,15.50981,15.50981,0,0,1,.2041,3.25586,19.04711,19.04711,0,0,1-.38965,3.09766,21.77894,21.77894,0,0,1-2.71484,6.96093,52.17792,52.17792,0,0,1-4.457,5.78809Z"/>
+            </g>
+            <g>
+              <path d="M69.05263,106.1236a3.42055,3.42055,0,0,0,.47071,1.68457,3.07913,3.07913,0,0,0,2.791,1.21192,4.75348,4.75348,0,0,0,1.63086-.26563,1.869,1.869,0,0,0,1.42383-1.84277,1.61053,1.61053,0,0,0-.60352-1.41895,5.95715,5.95715,0,0,0-1.91406-.72265l-1.59961-.373a7.09287,7.09287,0,0,1-2.21875-.80567,2.57226,2.57226,0,0,1-1.127-2.28222,3.56258,3.56258,0,0,1,1.10742-2.69824,4.366,4.366,0,0,1,3.13379-1.05372,5.33821,5.33821,0,0,1,3.1709.92579,3.37569,3.37569,0,0,1,1.30468,2.959H75.07021a3.14641,3.14641,0,0,0-.50977-1.50293,2.89757,2.89757,0,0,0-2.459-.9541,2.765,2.765,0,0,0-2.01367.61426,1.95969,1.95969,0,0,0-.61231,1.42773,1.40348,1.40348,0,0,0,.72364,1.31152,10.40542,10.40542,0,0,0,2.14746.66407l1.65722.38965a4.97917,4.97917,0,0,1,1.84961.77246,2.9268,2.9268,0,0,1,1.126,2.48144,3.12255,3.12255,0,0,1-1.43652,2.89746,6.31472,6.31472,0,0,1-3.33985.8711,4.91079,4.91079,0,0,1-3.47265-1.16211,3.96758,3.96758,0,0,1-1.23047-3.12891Z"/>
+              <path d="M84.98623,101.64118a3.50436,3.50436,0,0,1,1.13281,2.51465H84.66591a2.68244,2.68244,0,0,0-.60547-1.36524,1.91725,1.91725,0,0,0-1.51953-.54394,2.09962,2.09962,0,0,0-2.042,1.39355,5.52232,5.52232,0,0,0-.39844,2.22949,4.19826,4.19826,0,0,0,.56446,2.24707,2.1909,2.1909,0,0,0,3.249.34571,3.108,3.108,0,0,0,.75195-1.55078H86.119a3.51407,3.51407,0,0,1-3.79395,3.40332,3.40215,3.40215,0,0,1-2.78027-1.27344,4.8752,4.8752,0,0,1-1.03809-3.18359,5.36177,5.36177,0,0,1,1.1377-3.64454,3.67393,3.67393,0,0,1,2.89648-1.30273A3.87723,3.87723,0,0,1,84.98623,101.64118Z"/>
+              <path d="M87.61318,97.82282h1.49414v4.54883a4.29982,4.29982,0,0,1,.9541-.94629,3.22144,3.22144,0,0,1,1.80176-.47363,2.66467,2.66467,0,0,1,2.62305,1.35351,4.62615,4.62615,0,0,1,.373,2.04981v5.70312H93.32412v-5.60351a3.1295,3.1295,0,0,0-.25-1.43555,1.58892,1.58892,0,0,0-1.52735-.73047,2.54429,2.54429,0,0,0-1.68457.63867,3.07744,3.07744,0,0,0-.75488,2.416v4.71484H87.61318Z"/>
+              <path d="M103.50869,102.05524a4.48279,4.48279,0,0,1,1.17871,3.36719,5.79778,5.79778,0,0,1-1.03906,3.5498,3.74644,3.74644,0,0,1-3.22266,1.40137,3.6242,3.6242,0,0,1-2.89258-1.24023,4.91439,4.91439,0,0,1-1.07226-3.33008,5.317,5.317,0,0,1,1.12988-3.56543,3.779,3.779,0,0,1,3.0332-1.32715A3.98146,3.98146,0,0,1,103.50869,102.05524Zm-.92774,5.9082a5.63914,5.63914,0,0,0,.5459-2.5,4.47264,4.47264,0,0,0-.39453-2.02246,2.21264,2.21264,0,0,0-2.15039-1.22754,2.11429,2.11429,0,0,0-1.96875,1.04493,4.87243,4.87243,0,0,0-.61621,2.5205,4.23552,4.23552,0,0,0,.61621,2.36231,2.15782,2.15782,0,0,0,1.95312.94531A2.03413,2.03413,0,0,0,102.581,107.96344Z"/>
+              <path d="M112.96279,102.05524a4.48316,4.48316,0,0,1,1.17969,3.36719,5.804,5.804,0,0,1-1.03907,3.5498,3.74881,3.74881,0,0,1-3.22265,1.40137,3.62621,3.62621,0,0,1-2.89356-1.24023,4.919,4.919,0,0,1-1.07129-3.33008,5.3218,5.3218,0,0,1,1.12891-3.56543,3.779,3.779,0,0,1,3.0332-1.32715A3.97986,3.97986,0,0,1,112.96279,102.05524Zm-.92774,5.9082a5.6396,5.6396,0,0,0,.54688-2.5,4.48579,4.48579,0,0,0-.39453-2.02246,2.21264,2.21264,0,0,0-2.15039-1.22754,2.11584,2.11584,0,0,0-1.96973,1.04493,4.87243,4.87243,0,0,0-.61621,2.5205,4.23552,4.23552,0,0,0,.61621,2.36231,2.15951,2.15951,0,0,0,1.9541.94531A2.03181,2.03181,0,0,0,112.03505,107.96344Z"/>
+              <path d="M116.01748,97.86384h1.49414v12.19433h-1.49414Z"/>
+              <path d="M130.91787,102.05524a4.48663,4.48663,0,0,1,1.17871,3.36719,5.81008,5.81008,0,0,1-1.03809,3.5498,3.75121,3.75121,0,0,1-3.22265,1.40137,3.62959,3.62959,0,0,1-2.89454-1.24023,4.91859,4.91859,0,0,1-1.07031-3.33008,5.31668,5.31668,0,0,1,1.12891-3.56543,3.77762,3.77762,0,0,1,3.0332-1.32715A3.98146,3.98146,0,0,1,130.91787,102.05524Zm-.92774,5.9082a5.65257,5.65257,0,0,0,.5459-2.5,4.4998,4.4998,0,0,0-.39355-2.02246,2.21265,2.21265,0,0,0-2.15039-1.22754,2.11639,2.11639,0,0,0-1.97071,1.04493,4.88177,4.88177,0,0,0-.61523,2.5205,4.24335,4.24335,0,0,0,.61523,2.36231,2.16059,2.16059,0,0,0,1.9541.94531A2.03236,2.03236,0,0,0,129.99013,107.96344Z"/>
+              <path d="M134.6288,98.45368a2.28415,2.28415,0,0,1,2.01661-.76367c.09472,0,.19043.00293.29.00781.09961.00586.2129.01367.34082.02539v1.36133q-.23583-.01758-.33984-.02051c-.07031-.00293-.13574-.00488-.19726-.00488q-.68848,0-.82325.35351a6.93461,6.93461,0,0,0-.13379,1.79688h1.49414v1.17871h-1.49414v7.66992h-1.47753v-7.66992h-1.23633v-1.17871h1.23633V99.815A2.64768,2.64768,0,0,1,134.6288,98.45368Z"/>
+              <path d="M71.53115,116.86384h1.86523l4.42578,12.19433H76.01162l-1.27246-3.65234H69.955l-1.32227,3.65234H66.93935Zm2.73926,7.19726-1.87793-5.38769-1.9502,5.38769Z"/>
+              <path d="M79.15419,120.16755h1.41993v1.53613a3.36973,3.36973,0,0,1,.85449-1.0918,2.21833,2.21833,0,0,1,1.56933-.64355q.041,0,.14063.00879c.06641.00488.17969.0166.33984.0332v1.57715a2.07065,2.07065,0,0,0-.24414-.03321c-.07422-.00585-.15625-.00878-.24511-.00878a2.13286,2.13286,0,0,0-1.73536.72656,2.5391,2.5391,0,0,0-.60546,1.67285v5.11328H79.15419Z"/>
+              <path d="M90.64638,120.64118a3.493,3.493,0,0,1,1.13281,2.51465H90.32705a2.67541,2.67541,0,0,0-.60645-1.36524,1.91225,1.91225,0,0,0-1.51855-.54394,2.09963,2.09963,0,0,0-2.042,1.39355,5.52232,5.52232,0,0,0-.39843,2.22949,4.18955,4.18955,0,0,0,.56445,2.24707,2.192,2.192,0,0,0,3.25.34571,3.10729,3.10729,0,0,0,.751-1.55078h1.45214a3.51114,3.51114,0,0,1-3.793,3.40332,3.40535,3.40535,0,0,1-2.78125-1.27344,4.88,4.88,0,0,1-1.03711-3.18359,5.36645,5.36645,0,0,1,1.13672-3.64454,3.67865,3.67865,0,0,1,2.89746-1.30273A3.87429,3.87429,0,0,1,90.64638,120.64118Z"/>
+              <path d="M93.27334,116.82282h1.49414v4.54883a4.32143,4.32143,0,0,1,.95507-.94629,3.22034,3.22034,0,0,1,1.80079-.47363,2.66282,2.66282,0,0,1,2.623,1.35351,4.59728,4.59728,0,0,1,.374,2.04981v5.70312H98.98427v-5.60351a3.13359,3.13359,0,0,0-.248-1.43555,1.59184,1.59184,0,0,0-1.52735-.73047,2.54671,2.54671,0,0,0-1.68554.63867,3.07375,3.07375,0,0,0-.75586,2.416v4.71484H93.27334Z"/>
+              <path d="M102.72841,116.86384h1.51953v1.69335h-1.51953Zm0,3.3457h1.51953v8.84863h-1.51953Z"/>
+              <path d="M106.80459,117.6861h1.50976v2.48145h1.41992v1.2207h-1.41992V127.19a.6278.6278,0,0,0,.31641.623,1.341,1.341,0,0,0,.58008.09082c.07226,0,.15039-.00195.23242-.00488.084-.0039.17968-.01367.291-.02832v1.1875a3.265,3.265,0,0,1-.53515.10742,5.03134,5.03134,0,0,1-.60157.03321,1.62163,1.62163,0,0,1-1.41992-.53516,2.37833,2.37833,0,0,1-.373-1.39063v-5.88476h-1.20411v-1.2207h1.20411Z"/>
+              <path d="M116.71962,120.41266a3.37268,3.37268,0,0,1,1.34473,1.14942,3.97914,3.97914,0,0,1,.59375,1.56933,10.31715,10.31715,0,0,1,.13281,1.959h-6.46679a3.83366,3.83366,0,0,0,.63476,2.17676,2.11351,2.11351,0,0,0,1.83594.81933,2.35837,2.35837,0,0,0,1.85352-.77539,2.64193,2.64193,0,0,0,.54882-1.042h1.46875a3.12067,3.12067,0,0,1-.38574,1.0918,3.96133,3.96133,0,0,1-.73144.98339,3.45607,3.45607,0,0,1-1.67286.89649,5.07391,5.07391,0,0,1-1.21093.13281,3.70626,3.70626,0,0,1-2.7959-1.208,4.71556,4.71556,0,0,1-1.14649-3.38281,5.12972,5.12972,0,0,1,1.1543-3.47754,3.79759,3.79759,0,0,1,3.01953-1.33691A4.01394,4.01394,0,0,1,116.71962,120.41266Zm.53516,3.49024a3.88953,3.88953,0,0,0-.41992-1.55176,2.14613,2.14613,0,0,0-2.0332-1.0791,2.24156,2.24156,0,0,0-1.71192.74316,2.81667,2.81667,0,0,0-.73242,1.8877Z"/>
+              <path d="M126.55654,120.64118a3.50436,3.50436,0,0,1,1.13281,2.51465h-1.45312a2.68253,2.68253,0,0,0-.60547-1.36524,1.91728,1.91728,0,0,0-1.51953-.54394,2.09962,2.09962,0,0,0-2.042,1.39355,5.52232,5.52232,0,0,0-.39843,2.22949,4.19826,4.19826,0,0,0,.56445,2.24707,2.1909,2.1909,0,0,0,3.249.34571,3.10811,3.10811,0,0,0,.752-1.55078h1.45312a3.51405,3.51405,0,0,1-3.79394,3.40332,3.40217,3.40217,0,0,1-2.78028-1.27344,4.87519,4.87519,0,0,1-1.03808-3.18359,5.36177,5.36177,0,0,1,1.13769-3.64454,3.67394,3.67394,0,0,1,2.89649-1.30273A3.87722,3.87722,0,0,1,126.55654,120.64118Z"/>
+              <path d="M129.48232,117.6861h1.50977v2.48145H132.412v1.2207h-1.41992V127.19a.6278.6278,0,0,0,.3164.623,1.34107,1.34107,0,0,0,.58008.09082c.07227,0,.15039-.00195.23242-.00488.084-.0039.17969-.01367.291-.02832v1.1875a3.26507,3.26507,0,0,1-.53516.10742,5.03128,5.03128,0,0,1-.60156.03321,1.62161,1.62161,0,0,1-1.41992-.53516,2.37826,2.37826,0,0,1-.37305-1.39063v-5.88476h-1.2041v-1.2207h1.2041Z"/>
+              <path d="M135.40029,120.16755v5.90234a2.54092,2.54092,0,0,0,.21094,1.1123,1.45708,1.45708,0,0,0,1.44628.79688,2.04544,2.04544,0,0,0,2.06934-1.39453,5.6746,5.6746,0,0,0,.29883-2.05078v-4.36621h1.49414v8.89062h-1.41016l.01563-1.31152a2.98448,2.98448,0,0,1-.709.85449,3.07724,3.07724,0,0,1-2.03515.69727,2.61008,2.61008,0,0,1-2.541-1.26954,3.83472,3.83472,0,0,1-.36719-1.81836v-6.043Z"/>
+              <path d="M143.40224,120.16755h1.41992v1.53613a3.3698,3.3698,0,0,1,.8545-1.0918,2.21833,2.21833,0,0,1,1.56933-.64355q.041,0,.14063.00879c.0664.00488.17968.0166.33984.0332v1.57715a2.07065,2.07065,0,0,0-.24414-.03321c-.07422-.00585-.15625-.00878-.24512-.00878a2.13284,2.13284,0,0,0-1.73535.72656,2.53911,2.53911,0,0,0-.60547,1.67285v5.11328h-1.49414Z"/>
+              <path d="M154.51357,120.41266a3.36959,3.36959,0,0,1,1.34375,1.14942,3.98047,3.98047,0,0,1,.59473,1.56933,10.33674,10.33674,0,0,1,.13183,1.959h-6.46679a3.84113,3.84113,0,0,0,.63476,2.17676,2.11584,2.11584,0,0,0,1.83594.81933,2.35694,2.35694,0,0,0,1.85351-.77539,2.64182,2.64182,0,0,0,.54883-1.042h1.46875a3.097,3.097,0,0,1-.38476,1.0918,3.93922,3.93922,0,0,1-.73243.98339,3.45279,3.45279,0,0,1-1.67187.89649,5.07977,5.07977,0,0,1-1.21094.13281,3.70982,3.70982,0,0,1-2.79687-1.208,4.71987,4.71987,0,0,1-1.14649-3.38281,5.12972,5.12972,0,0,1,1.1543-3.47754,3.80032,3.80032,0,0,1,3.01953-1.33691A4.018,4.018,0,0,1,154.51357,120.41266Zm.53516,3.49024a3.90573,3.90573,0,0,0-.41993-1.55176,2.1471,2.1471,0,0,0-2.0332-1.0791,2.24362,2.24362,0,0,0-1.71289.74316,2.81667,2.81667,0,0,0-.73242,1.8877Z"/>
+            </g>
+            <g>
+              <path d="M76.2831,80.72419H69.80849v2.59765h5.94336v2.125H69.80849v3.14649h6.77344v2.19922H67.30947V78.55719H76.2831Z"/>
+              <path d="M82.07216,78.55719h2.89258l4.33008,12.23536H86.52138l-.80664-2.51465H81.20888l-.83008,2.51465H77.705Zm-.168,7.61231H85.037l-1.54492-4.81445Z"/>
+              <path d="M94.34951,78.55719h2.89258l4.3291,12.23536H98.79873l-.80762-2.51465H93.48525l-.8291,2.51465H89.98232Zm-.16895,7.61231h3.13379l-1.5459-4.81445Z"/>
+              <path d="M112.17568,80.72419h-6.47461v2.59765h5.94336v2.125h-5.94336v3.14649h6.77344v2.19922h-9.27246V78.55719h8.97363Z"/>
+              <path d="M118.98232,88.42731a6.67635,6.67635,0,0,1,2.39062-2.54883,17.5345,17.5345,0,0,0,2.11622-1.67675,2.47414,2.47414,0,0,0,.73925-1.72657,1.91112,1.91112,0,0,0-.42382-1.26953,1.72568,1.72568,0,0,0-2.68165.29883,4.02329,4.02329,0,0,0-.26562,1.47754h-2.29883a5.81922,5.81922,0,0,1,.55664-2.48242,3.469,3.469,0,0,1,3.36524-1.80078,4.27163,4.27163,0,0,1,3.041,1.05761,3.65758,3.65758,0,0,1,1.13086,2.80176,3.78656,3.78656,0,0,1-.79883,2.374,7.9537,7.9537,0,0,1-1.72168,1.53614l-.94824.67187q-.89062.63135-1.21777.91309a2.70083,2.70083,0,0,0-.55176.65625h5.25391v2.083h-8.24219A5.629,5.629,0,0,1,118.98232,88.42731Z"/>
+              <path d="M130.121,87.09919a2.71538,2.71538,0,0,0,.23242,1.19531,1.5873,1.5873,0,0,0,1.56446.87109,1.73077,1.73077,0,0,0,1.21386-.47754,1.774,1.774,0,0,0,.51758-1.373,1.54728,1.54728,0,0,0-.96-1.58594,4.85908,4.85908,0,0,0-1.7207-.22363V83.81208a4.45823,4.45823,0,0,0,1.60449-.22461,1.38544,1.38544,0,0,0,.78613-1.41113,1.57877,1.57877,0,0,0-.40234-1.12012,1.466,1.466,0,0,0-1.12988-.43164,1.42708,1.42708,0,0,0-1.2295.53125,2.261,2.261,0,0,0-.377,1.41894h-2.207a5.90687,5.90687,0,0,1,.30664-1.70117,3.82113,3.82113,0,0,1,.91211-1.30371,3.16545,3.16545,0,0,1,1.10254-.64746,4.76647,4.76647,0,0,1,1.56738-.22363,4.16758,4.16758,0,0,1,2.78125.8916,2.97511,2.97511,0,0,1,1.05762,2.39551,2.647,2.647,0,0,1-.63086,1.793,2.15342,2.15342,0,0,1-.83008.62207,1.70489,1.70489,0,0,1,.92969.55665,2.97168,2.97168,0,0,1,.90527,2.291,3.863,3.863,0,0,1-1.05762,2.68457,4.02732,4.02732,0,0,1-3.12988,1.1582,3.78618,3.78618,0,0,1-3.5498-1.668,4.95905,4.95905,0,0,1-.58106-2.32422Z"/>
+            </g>
+            <circle class="cls-1Big" cx="100.95737" cy="125.38613" r="68.70833"/>
+            <rect class="cls-2Big" x="57.10595" y="32.67719" width="137.41666" height="137.41666"/>
+            <rect class="cls-3Big" x="44.9431" y="44.84005" width="137.41666" height="137.41666"/>
+          </g>
+        </g>
+      </svg>
+      
       <h2 class="abstractsTitle">Call For Abstracts</h2>
     </section>
 
-    <section class="main-text">
+    <div class="main-text spacing">
       <h2>The Topic</h2>
-      <p>The Torino EAAE 2023 Annual Conference titled School of Architecture(s), will focus on the plurality
-        of the discipline - not just architecture but architectures(s) - and the role of architectural education in
-        training, questioning and practicing this plurality.</p>
+      <p>The Torino EAAE Annual Conference 2023  titled <b>School of Architecture(s)</b>, will focus on the plurality of architecture as a discipline and on the role of architectural education in training, questioning, and practicing this plurality.</p>
 
-      <p>Architecture as a discipline entangles multiple interactions between the physical world, technology
-        and the organisation of the cultural and social environment of the profession, but its multidiciplinar
-        character is not the only multidimension to be enquired . In the era of Postarchitecture moving
-        towards an autonomous subjectivity, open up the field questioning the plurality of the discipline is
-        crucial: not just architecture but architecture(s). Furthermore, European Schools for Architectural
-        Education offer a wide variety of meanings of the term Architecture in their curricula. For all these
-        reasons is urgent to discuss a broadening of the term itself to understand the positioning of
-        Architectural education in the global contemporary world.</p>
+      <p>Architecture as a discipline entangles multiple interactions between the physical world, technology, and the organisation of the cultural and social environment of the profession, but its multidisciplinary character is not the only multi-dimension to be investigated. In the era of post-architecture, moving towards an autonomous subjectivity, opening up the field, and questioning the plurality of the discipline is crucial: not just Architecture but Architecture(s). Furthermore, European Schools of Architecture offer a wide variety of meanings of the term Architecture in their curricula. For all these reasons, it is urgent to discuss a broadening of the term itself to understand the positioning of architectural education in the contemporary global world.</p>
       
-      <p>The conference is an invitation to think differently, reflecting upon the context of the discipline to
-        understand the knowledge of the future focusing on the question: what is Architecture in the age
-        often described as post Architecture?</p>
+      <p>The conference is an invitation to think differently, reflecting upon the context of the discipline to understand the knowledge of the future, focusing on the question: what is Architecture in the age often described as post-architecture?</p>
 
-      <p>Considering how antagonist characters polarise human knowledge and that architectural practice is
-        moving towards an autonomous subjectivity, Architecture can be understood as dichotomies leading
-        to a new paradigm beyond Postarchitecture: architecture(s). In this frame this conference attempts
-        to reason around a contemporary broad and inclusive definition of Architecture through the
-        discussion of six antinomian couple of concepts coupled into tree parallel sessions: Architecture as a <b><i>method</i></b>
-        and/or as a <b><i>discipline</i></b>, Architecture of the <b><i>Masters</i></b> and/or of the <b><i>topics</i></b>, Architecture for
-        <b><i>architects</i></b> and/or for the <b><i>community</i></b>, Architecture as <b><i>avant-garde</i></b> and/or <b><i>market-oriented</i></b>,
-        Architecture <b><i>inside</i></b> and/or <b><i>outside</i></b> the wall, Architecture <b><i>disciplinary</i></b> and/or <b><i>extra-disciplinary</i></b>. The
-        six dichotomies will be grouped into the tree main sessions: <b>Seeds of architecture</b>: Ways of Teaching,
-        <b>Roots of Architecture</b>: Ways of Research, <b>Branches of Architecture</b>: Ways of Practice.</p>
-    </section>
-    <section class="main-text">
-      <h2>Session1. Seeds of architecture: Ways of Teaching</h2>
-      <p>Architecture as a <b><i>method</i></b> and/or as a <b><i>discipline</i></b>. Nowadays, there can be a shift in teaching
-        architecture from defining a specific knowledge inside the discipline or a series of methods that can
-        be generalised and exploited for the practice.</p>
-      <p>Architecture of the <b><i>Masters</i></b> and/or of the <b><i>Topics</i></b>. Masters overlooked the teaching systems before
-        the 20th; however, topics can be another point of view in validating the system of knowledge
-        transmitted to future generations.</p>
-    </section>
-    <section class="main-text">
-      <h2>Session 2. Roots of Architecture: Ways of Research</h2>
-      <p>Architecture for <b><i>architects</i></b> and/or for the <b><i>community</i></b>. Who is the final architecture user, and how is
-        this reflected in practice? Is Architecture a discipline or a service? Both points of view lead to a
-        different definition of Architecture that needs to be translated into teaching.</p>
-      <p>Architecture as <b><i>avant-garde</i></b> and/or <b><i>market-oriented</i></b>. What is the result? Architecture can be for the
-        market, or architectural schools can open new visions that the market must look at.</p>
-    </section>
-    <section class="main-text">
-      <h2>Session 3. Branches of Architecture: Ways of Practice</h2>
-      <p>Architecture <b><i>inside</i></b> and/or <b><i>outside</i></b> the wall. Where is the place for the practice? Architecture can be
-        inside the wall or outside of it; it can build the wall itself or be seen as a theoretical application.</p>
-      <p>Architecture <b><i>disciplinary</i></b> and/or <b><i>extra-disciplinary</i></b>. What does architecture have to face?
-        Architecture can look at itself in the realm of the discipline or look at other knowledge: sociology,
-        economics, ethnography are just examples. Which are the potential of both approaches?</p>
-    </section>
-    <section class="main-text">
+      <p>Considering how antagonist characters polarise human knowledge and that architectural practice is moving towards an autonomous subjectivity, architecture can be understood as a tension between dichotomies leading to a new paradigm: architecture(s).</p>
+
+      <p>n this frame, the conference attempts to reason around a contemporary, wider and inclusive definition of architecture by discussing six pairs of antinomian concepts articulated in three parallel sessions: architecture as a <b><i>method</b></i> and/or as a <b><i>discipline</b></i>; architecture of the <b><i>Masters</b></i> and/or of the <b><i>topics</b></i>; architecture for <b><i>architects</b></i> and/or for the <b><i>community</b></i>; architecture as <b><i>avant-garde</b></i> and/or <b><i>market-oriented</b></i>; architecture <b><i>inside</b></i> and/or <b><i>outside</b></i> the wall; architecture <b><i>disciplinary</b></i> and/or <b><i>extra-disciplinary</b></i>.</p>
+
+      <p>The six dichotomies are grouped into three main sessions:
+         <br>
+         <b>Seeds of architecture(s):</b> Ways of Teaching,
+         <br>
+         <b>Roots of architecture(s):</b> Ways of Research,
+         <br>
+         <b>Branches of architecture(s):</b> Ways of Practice.
+      </p>
+    </div>
+
+    <div class="main-text">
+      <h2 class="session firstSession">Session1. Seeds of architecture: Ways of Teaching</h2>
+      
+      <p>Architecture as a <b><i>method</b></i> and/or as a <b><i>discipline</b></i>. Nowadays, there can be a shift in teaching architecture from defining a specific knowledge inside the discipline or a series of methods that can be generalised and exploited for practice.</p>
+
+      <p>Architecture of the <b><i>Masters</b></i> and/or of the <b><i>Topics</b></i>. The masters overlooked the teaching systems before the 20th century; from the Modern Movement onward, the transmission of knowledge is more and more focused on topics related to social and human-centered issues.</p>
+    </div>
+
+    <div class="main-text">
+      <h2 class="session secondSession">Session 2. Roots of Architecture: Ways of Research</h2>
+      
+      <p>Architecture for <b><i>architects</b></i> and/or for the <b><i>community</b></i>. Who is the final architecture user, and how is this reflected in practice? Is Architecture a discipline or a service? Both points of view lead to a different definition of Architecture that needs to be translated into teaching.</p>
+
+      <p>Architecture as <b><i>avant-garde</b></i> and/or <b><i>market-oriented</b></i>. What is the result? Architecture can be for the market, or architectural schools can open new visions that the market must look at.</p>
+    </div>
+
+    <div class="main-text">
+      <h2 class="session">Session 3. Branches of Architecture: Ways of Practice</h2>
+      
+      <p>Architecture <b><i>inside</b></i> and/or <b><i>outside</b></i> the wall. Where is the place for the practice? Architecture can be inside the wall or outside of it; it can build the wall itself or be seen as a theoretical application.</p>
+
+      <p>Architecture <b><i>disciplinary</b></i> and/or <b><i>extra-disciplinary</b></i>. What does architecture have to face? Architecture can look at itself in the realm of the discipline or look at other knowledge: sociology, economics, ethnography are just examples. Which are the potential of both approaches?</p>
+    </div>
+
+    <div class="main-text">
       <h2>Submitting your contribution</h2>
-      <p>In response to above suggested conference topics, we encourage you to submit your
-        contribution and continue the discussion on the substance of architectural education.
-        Abstracts can be submitted by teachers, researchers, practicing architects and PhD students
-        not exclusively from EAAE member schools.</p>
-      <p>Authors from other fields are invited to contribute to discussion as well.</p>
-      <p>To contribute to our call, please use the form available below.</p>
-      <p>The proposal should contain the title, names of authors, their brief cv, institutions or related
-        offices, a 1500 characters abstract (including spaces) and one image 1600x1600 pixel in png
-        or jpe format. The submissions will be blind-peer-reviewed by the conference scientific
-        committee and reviewers and, upon acceptance and registration, invited for an oral
-        presentation in one of the conference sessions.</p>
-      <p class="highlight">The selected abstracts will be published online on TU delft&apos;s open access communication
-        channel.</p>
-    </section>
-    <section class="main-text">
+      
+      <p>In response to conference topics, we encourage you to submit your contribution and continue the discussion on the substance of architectural education. Abstracts can be submitted by teachers, researchers, practicing architects, and PhD students, not exclusively from EAAE member schools. Authors from other fields are invited to contribute to the discussion as well.</p>
+
+      <p>The proposal should contain the title, names of authors, a short bio, institutions or related offices, a 1500 characters abstract (including spaces), and one image 1600x1600 pixel in png (drawings) or jpeg (pictures) format. The abstract must be written in English filling the <a href="#formSection"><u class="highlight">form below</u></a>. No bibliographic references are required.</p>
+
+      <p>The submissions will be blind-peer-reviewed by the conference scientific committee and reviewers and, upon acceptance and registration, invited for an oral presentation in one of the conference sessions.</p>
+
+      <p>The selected abstracts will be published online by <a href="https://publishings.eaae.be/" target="noopener"><u class="highlight">EAAE Publishings</u></a>, an open-access cross-referenced platform set up by Stichting Openaccess.</p>
+    </div>
+
+    <div class="main-text">
       <h2>Conference presentation and publication rules</h2>
-      <p>Accepted authors agree to either make a presentation, participate in thematic round table
-        discussions or prepare their contribution in poster format at the School of architecture(s)
-        Conference.</p>
-      <p>Accepted authors must pay full conference registration to present at the conference and be
-          eligible for inclusion in the proceedings and/or in the posters exhibition and online exhibit.</p>
-      <p>The conference scientific commitee reserves the right to withhold a paper or a poster set
-        from the program if the author has refused to comply with the guidelines.</p>
-      <p>Failure to comply with the conference deadlines or request for materials in advance may
-        result in an author being dropped from the program.</p>
-      <p>To send the abstract, necessarily within 1500 characters including spaces, authors will have
-        to access the <u>format</u> and fill in the fields relating to the authors, title, abstract, keywords,
-        and a short CV composed of 300 characters for each author. All texts must be in English.
-        You can upload a representative image of the proposal (optional). It is not necessary to enter
-        any bibliographic references.</p>
-      <p>In the following step of sending the full paper to be submitted to the review process,
-        authors must upload a .docx file, laid out according to the full paper format. At this point, it
-        will be also possible to update the authors&apos; list, the title, the abstract, and the keywords of
-        the contribution.</p>
-    </section>
+      
+      <p>Accepted authors must pay full conference registration to present at the conference and be eligible for inclusion in the proceedings. After a peer review process the proceedings of the EAAE Annual Conference 2023 will be published in Springer Nature.</p>
+    
+      <p>Failure to comply with the conference deadlines or request for materials in advance may result in an author being dropped from the programme.</p>
+    </div>
 
-    <section class="formSection">
-      <form action="#" method="post">
+    <div class="main-text">
+      <a href="" class="highlight"><h2 class="highlight">Download the PDF <i class="fa-solid fa-file-pdf highlight"></i></h2></a>
+    </div>
+
+    <div class="formSection" id="formSection">
+      <form onkeypress="return event.keyCode != 13" method="post">
         <fieldset>
-          <legend><h2>Submit your abstract</h2></legend>
+          <legend><h3>Submit your abstract</h3></legend>
 
-          <label for="fullName">Your name</label>
-          <input type="text" name="fullName" id="fullName">
+          <label for="name"><h3>Name</h3></label>
+          <input type="text" name="name" id="name">
 
-          <label for="email">Email</label>
+          <label for="surname"><h3>Surname</h3></label>
+          <input type="text" name="surname" id="surname">
+
+          <label for="affiliation"><h3>Affiliation</h3></label>
+          <input type="text" name="affiliation" id="affiliation">
+
+          <label for="session"><h3>Session</h3></label>
+          <select name="session" class="form-control" id="session">
+            <option value="0" label="Select a session" selected="selected"><h3>Select a country</h3></option>
+            <option value="1" label="Session 1">1. Seeds of architecture</option>
+            <option value="2" label="Session 2">2. Roots of architecture</option>
+            <option value="3" label="Session 3">3. Branches of architecture</option>
+          </select>
+
+          <label for="country"><h3>Country</h3></label>
+          <select name="country" class="form-control" id="country">
+            <option value="0" label="Select a country" selected="selected"><h3>Select a country</h3></option>
+            <optgroup id="country-optgroup-Africa" label="Africa">
+                <option value="DZ" label="Algeria">Algeria</option>
+                <option value="AO" label="Angola">Angola</option>
+                <option value="BJ" label="Benin">Benin</option>
+                <option value="BW" label="Botswana">Botswana</option>
+                <option value="BF" label="Burkina Faso">Burkina Faso</option>
+                <option value="BI" label="Burundi">Burundi</option>
+                <option value="CM" label="Cameroon">Cameroon</option>
+                <option value="CV" label="Cape Verde">Cape Verde</option>
+                <option value="CF" label="Central African Republic">Central African Republic</option>
+                <option value="TD" label="Chad">Chad</option>
+                <option value="KM" label="Comoros">Comoros</option>
+                <option value="CG" label="Congo - Brazzaville">Congo - Brazzaville</option>
+                <option value="CD" label="Congo - Kinshasa">Congo - Kinshasa</option>
+                <option value="CI" label="Côte d’Ivoire">Côte d’Ivoire</option>
+                <option value="DJ" label="Djibouti">Djibouti</option>
+                <option value="EG" label="Egypt">Egypt</option>
+                <option value="GQ" label="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="ER" label="Eritrea">Eritrea</option>
+                <option value="ET" label="Ethiopia">Ethiopia</option>
+                <option value="GA" label="Gabon">Gabon</option>
+                <option value="GM" label="Gambia">Gambia</option>
+                <option value="GH" label="Ghana">Ghana</option>
+                <option value="GN" label="Guinea">Guinea</option>
+                <option value="GW" label="Guinea-Bissau">Guinea-Bissau</option>
+                <option value="KE" label="Kenya">Kenya</option>
+                <option value="LS" label="Lesotho">Lesotho</option>
+                <option value="LR" label="Liberia">Liberia</option>
+                <option value="LY" label="Libya">Libya</option>
+                <option value="MG" label="Madagascar">Madagascar</option>
+                <option value="MW" label="Malawi">Malawi</option>
+                <option value="ML" label="Mali">Mali</option>
+                <option value="MR" label="Mauritania">Mauritania</option>
+                <option value="MU" label="Mauritius">Mauritius</option>
+                <option value="YT" label="Mayotte">Mayotte</option>
+                <option value="MA" label="Morocco">Morocco</option>
+                <option value="MZ" label="Mozambique">Mozambique</option>
+                <option value="NA" label="Namibia">Namibia</option>
+                <option value="NE" label="Niger">Niger</option>
+                <option value="NG" label="Nigeria">Nigeria</option>
+                <option value="RW" label="Rwanda">Rwanda</option>
+                <option value="RE" label="Réunion">Réunion</option>
+                <option value="SH" label="Saint Helena">Saint Helena</option>
+                <option value="SN" label="Senegal">Senegal</option>
+                <option value="SC" label="Seychelles">Seychelles</option>
+                <option value="SL" label="Sierra Leone">Sierra Leone</option>
+                <option value="SO" label="Somalia">Somalia</option>
+                <option value="ZA" label="South Africa">South Africa</option>
+                <option value="SD" label="Sudan">Sudan</option>
+                <option value="SZ" label="Swaziland">Swaziland</option>
+                <option value="ST" label="São Tomé and Príncipe">São Tomé and Príncipe</option>
+                <option value="TZ" label="Tanzania">Tanzania</option>
+                <option value="TG" label="Togo">Togo</option>
+                <option value="TN" label="Tunisia">Tunisia</option>
+                <option value="UG" label="Uganda">Uganda</option>
+                <option value="EH" label="Western Sahara">Western Sahara</option>
+                <option value="ZM" label="Zambia">Zambia</option>
+                <option value="ZW" label="Zimbabwe">Zimbabwe</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Americas" label="Americas">
+                <option value="AI" label="Anguilla">Anguilla</option>
+                <option value="AG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="AR" label="Argentina">Argentina</option>
+                <option value="AW" label="Aruba">Aruba</option>
+                <option value="BS" label="Bahamas">Bahamas</option>
+                <option value="BB" label="Barbados">Barbados</option>
+                <option value="BZ" label="Belize">Belize</option>
+                <option value="BM" label="Bermuda">Bermuda</option>
+                <option value="BO" label="Bolivia">Bolivia</option>
+                <option value="BR" label="Brazil">Brazil</option>
+                <option value="VG" label="British Virgin Islands">British Virgin Islands</option>
+                <option value="CA" label="Canada">Canada</option>
+                <option value="KY" label="Cayman Islands">Cayman Islands</option>
+                <option value="CL" label="Chile">Chile</option>
+                <option value="CO" label="Colombia">Colombia</option>
+                <option value="CR" label="Costa Rica">Costa Rica</option>
+                <option value="CU" label="Cuba">Cuba</option>
+                <option value="DM" label="Dominica">Dominica</option>
+                <option value="DO" label="Dominican Republic">Dominican Republic</option>
+                <option value="EC" label="Ecuador">Ecuador</option>
+                <option value="SV" label="El Salvador">El Salvador</option>
+                <option value="FK" label="Falkland Islands">Falkland Islands</option>
+                <option value="GF" label="French Guiana">French Guiana</option>
+                <option value="GL" label="Greenland">Greenland</option>
+                <option value="GD" label="Grenada">Grenada</option>
+                <option value="GP" label="Guadeloupe">Guadeloupe</option>
+                <option value="GT" label="Guatemala">Guatemala</option>
+                <option value="GY" label="Guyana">Guyana</option>
+                <option value="HT" label="Haiti">Haiti</option>
+                <option value="HN" label="Honduras">Honduras</option>
+                <option value="JM" label="Jamaica">Jamaica</option>
+                <option value="MQ" label="Martinique">Martinique</option>
+                <option value="MX" label="Mexico">Mexico</option>
+                <option value="MS" label="Montserrat">Montserrat</option>
+                <option value="AN" label="Netherlands Antilles">Netherlands Antilles</option>
+                <option value="NI" label="Nicaragua">Nicaragua</option>
+                <option value="PA" label="Panama">Panama</option>
+                <option value="PY" label="Paraguay">Paraguay</option>
+                <option value="PE" label="Peru">Peru</option>
+                <option value="PR" label="Puerto Rico">Puerto Rico</option>
+                <option value="BL" label="Saint Barthélemy">Saint Barthélemy</option>
+                <option value="KN" label="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                <option value="LC" label="Saint Lucia">Saint Lucia</option>
+                <option value="MF" label="Saint Martin">Saint Martin</option>
+                <option value="PM" label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                <option value="VC" label="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                <option value="SR" label="Suriname">Suriname</option>
+                <option value="TT" label="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="TC" label="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                <option value="VI" label="U.S. Virgin Islands">U.S. Virgin Islands</option>
+                <option value="US" label="United States">United States</option>
+                <option value="UY" label="Uruguay">Uruguay</option>
+                <option value="VE" label="Venezuela">Venezuela</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Asia" label="Asia">
+                <option value="AF" label="Afghanistan">Afghanistan</option>
+                <option value="AM" label="Armenia">Armenia</option>
+                <option value="AZ" label="Azerbaijan">Azerbaijan</option>
+                <option value="BH" label="Bahrain">Bahrain</option>
+                <option value="BD" label="Bangladesh">Bangladesh</option>
+                <option value="BT" label="Bhutan">Bhutan</option>
+                <option value="BN" label="Brunei">Brunei</option>
+                <option value="KH" label="Cambodia">Cambodia</option>
+                <option value="CN" label="China">China</option>
+                <option value="GE" label="Georgia">Georgia</option>
+                <option value="HK" label="Hong Kong SAR China">Hong Kong SAR China</option>
+                <option value="IN" label="India">India</option>
+                <option value="ID" label="Indonesia">Indonesia</option>
+                <option value="IR" label="Iran">Iran</option>
+                <option value="IQ" label="Iraq">Iraq</option>
+                <option value="IL" label="Israel">Israel</option>
+                <option value="JP" label="Japan">Japan</option>
+                <option value="JO" label="Jordan">Jordan</option>
+                <option value="KZ" label="Kazakhstan">Kazakhstan</option>
+                <option value="KW" label="Kuwait">Kuwait</option>
+                <option value="KG" label="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="LA" label="Laos">Laos</option>
+                <option value="LB" label="Lebanon">Lebanon</option>
+                <option value="MO" label="Macau SAR China">Macau SAR China</option>
+                <option value="MY" label="Malaysia">Malaysia</option>
+                <option value="MV" label="Maldives">Maldives</option>
+                <option value="MN" label="Mongolia">Mongolia</option>
+                <option value="MM" label="Myanmar [Burma]">Myanmar [Burma]</option>
+                <option value="NP" label="Nepal">Nepal</option>
+                <option value="NT" label="Neutral Zone">Neutral Zone</option>
+                <option value="KP" label="North Korea">North Korea</option>
+                <option value="OM" label="Oman">Oman</option>
+                <option value="PK" label="Pakistan">Pakistan</option>
+                <option value="PS" label="Palestinian Territories">Palestinian Territories</option>
+                <option value="YD" label="People's Democratic Republic of Yemen">People's Democratic Republic of Yemen</option>
+                <option value="PH" label="Philippines">Philippines</option>
+                <option value="QA" label="Qatar">Qatar</option>
+                <option value="SA" label="Saudi Arabia">Saudi Arabia</option>
+                <option value="SG" label="Singapore">Singapore</option>
+                <option value="KR" label="South Korea">South Korea</option>
+                <option value="LK" label="Sri Lanka">Sri Lanka</option>
+                <option value="SY" label="Syria">Syria</option>
+                <option value="TW" label="Taiwan">Taiwan</option>
+                <option value="TJ" label="Tajikistan">Tajikistan</option>
+                <option value="TH" label="Thailand">Thailand</option>
+                <option value="TL" label="Timor-Leste">Timor-Leste</option>
+                <option value="TR" label="Turkey">Turkey</option>
+                <option value="TM" label="Turkmenistan">Turkmenistan</option>
+                <option value="AE" label="United Arab Emirates">United Arab Emirates</option>
+                <option value="UZ" label="Uzbekistan">Uzbekistan</option>
+                <option value="VN" label="Vietnam">Vietnam</option>
+                <option value="YE" label="Yemen">Yemen</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Europe" label="Europe">
+                <option value="AL" label="Albania">Albania</option>
+                <option value="AD" label="Andorra">Andorra</option>
+                <option value="AT" label="Austria">Austria</option>
+                <option value="BY" label="Belarus">Belarus</option>
+                <option value="BE" label="Belgium">Belgium</option>
+                <option value="BA" label="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                <option value="BG" label="Bulgaria">Bulgaria</option>
+                <option value="HR" label="Croatia">Croatia</option>
+                <option value="CY" label="Cyprus">Cyprus</option>
+                <option value="CZ" label="Czech Republic">Czech Republic</option>
+                <option value="DK" label="Denmark">Denmark</option>
+                <option value="DD" label="East Germany">East Germany</option>
+                <option value="EE" label="Estonia">Estonia</option>
+                <option value="FO" label="Faroe Islands">Faroe Islands</option>
+                <option value="FI" label="Finland">Finland</option>
+                <option value="FR" label="France">France</option>
+                <option value="DE" label="Germany">Germany</option>
+                <option value="GI" label="Gibraltar">Gibraltar</option>
+                <option value="GR" label="Greece">Greece</option>
+                <option value="GG" label="Guernsey">Guernsey</option>
+                <option value="HU" label="Hungary">Hungary</option>
+                <option value="IS" label="Iceland">Iceland</option>
+                <option value="IE" label="Ireland">Ireland</option>
+                <option value="IM" label="Isle of Man">Isle of Man</option>
+                <option value="IT" label="Italy">Italy</option>
+                <option value="JE" label="Jersey">Jersey</option>
+                <option value="LV" label="Latvia">Latvia</option>
+                <option value="LI" label="Liechtenstein">Liechtenstein</option>
+                <option value="LT" label="Lithuania">Lithuania</option>
+                <option value="LU" label="Luxembourg">Luxembourg</option>
+                <option value="MK" label="Macedonia">Macedonia</option>
+                <option value="MT" label="Malta">Malta</option>
+                <option value="FX" label="Metropolitan France">Metropolitan France</option>
+                <option value="MD" label="Moldova">Moldova</option>
+                <option value="MC" label="Monaco">Monaco</option>
+                <option value="ME" label="Montenegro">Montenegro</option>
+                <option value="NL" label="Netherlands">Netherlands</option>
+                <option value="NO" label="Norway">Norway</option>
+                <option value="PL" label="Poland">Poland</option>
+                <option value="PT" label="Portugal">Portugal</option>
+                <option value="RO" label="Romania">Romania</option>
+                <option value="RU" label="Russia">Russia</option>
+                <option value="SM" label="San Marino">San Marino</option>
+                <option value="RS" label="Serbia">Serbia</option>
+                <option value="CS" label="Serbia and Montenegro">Serbia and Montenegro</option>
+                <option value="SK" label="Slovakia">Slovakia</option>
+                <option value="SI" label="Slovenia">Slovenia</option>
+                <option value="ES" label="Spain">Spain</option>
+                <option value="SJ" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                <option value="SE" label="Sweden">Sweden</option>
+                <option value="CH" label="Switzerland">Switzerland</option>
+                <option value="UA" label="Ukraine">Ukraine</option>
+                <option value="SU" label="Union of Soviet Socialist Republics">Union of Soviet Socialist Republics</option>
+                <option value="GB" label="United Kingdom">United Kingdom</option>
+                <option value="VA" label="Vatican City">Vatican City</option>
+                <option value="AX" label="Åland Islands">Åland Islands</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Oceania" label="Oceania">
+                <option value="AS" label="American Samoa">American Samoa</option>
+                <option value="AQ" label="Antarctica">Antarctica</option>
+                <option value="AU" label="Australia">Australia</option>
+                <option value="BV" label="Bouvet Island">Bouvet Island</option>
+                <option value="IO" label="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                <option value="CX" label="Christmas Island">Christmas Island</option>
+                <option value="CC" label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</option>
+                <option value="CK" label="Cook Islands">Cook Islands</option>
+                <option value="FJ" label="Fiji">Fiji</option>
+                <option value="PF" label="French Polynesia">French Polynesia</option>
+                <option value="TF" label="French Southern Territories">French Southern Territories</option>
+                <option value="GU" label="Guam">Guam</option>
+                <option value="HM" label="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                <option value="KI" label="Kiribati">Kiribati</option>
+                <option value="MH" label="Marshall Islands">Marshall Islands</option>
+                <option value="FM" label="Micronesia">Micronesia</option>
+                <option value="NR" label="Nauru">Nauru</option>
+                <option value="NC" label="New Caledonia">New Caledonia</option>
+                <option value="NZ" label="New Zealand">New Zealand</option>
+                <option value="NU" label="Niue">Niue</option>
+                <option value="NF" label="Norfolk Island">Norfolk Island</option>
+                <option value="MP" label="Northern Mariana Islands">Northern Mariana Islands</option>
+                <option value="PW" label="Palau">Palau</option>
+                <option value="PG" label="Papua New Guinea">Papua New Guinea</option>
+                <option value="PN" label="Pitcairn Islands">Pitcairn Islands</option>
+                <option value="WS" label="Samoa">Samoa</option>
+                <option value="SB" label="Solomon Islands">Solomon Islands</option>
+                <option value="GS" label="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                <option value="TK" label="Tokelau">Tokelau</option>
+                <option value="TO" label="Tonga">Tonga</option>
+                <option value="TV" label="Tuvalu">Tuvalu</option>
+                <option value="UM" label="U.S. Minor Outlying Islands">U.S. Minor Outlying Islands</option>
+                <option value="VU" label="Vanuatu">Vanuatu</option>
+                <option value="WF" label="Wallis and Futuna">Wallis and Futuna</option>
+            </optgroup>
+          </select>
+
+          <label for="email"><h3>Email</h3></label>
           <input type="email" name="email" id="email">
 
-          <label for="abstractTitle">Abstract Title</label>
+          <label for="abstractTitle"><h3>Abstract Title</h3></label>
           <input type="text" name="abstractTitle" id="abstractTitle">
+          
+          <label for="keywords"><h3>Keywords</h3></label>
+          <div class="wrapper" name="keywords">
+            <p class="info">Type your keywords & click enter or spacebar.</p>
+            <input type="text" id="hashtags" autocomplete="off">
+            <div class="tag-container">
+            </div>
+          </div>
 
-          <label for="abstract">Your Abstract</label>
-          <textarea name="abstract" id="abstract" cols="30" rows="10"></textarea>
+          <label for="abstract"><h3>Abstract</h3></label>
+          <textarea name="abstract" id="abstract" cols="30" rows="10" maxlength="1500"></textarea>
+
+          <label for="abstract"><h3>Short Bio</h3></label>
+          <textarea name="abstract" id="abstract" cols="30" rows="10" maxlength="350"></textarea>
+
+          <label for="image"><h3>Image</h3></label>
+          <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop .png or .jpg file here or click to upload (1600px x 1600px)</span>
+            <input type="file" accept=".png,.jpg" id="fileUpload" name="myFile" class="drop-zone__input">
+          </div>
 
           <div class="checks">
             <input type="checkbox" name="copyEmail" id="copyEmail">
             <label for="copyEmail">Send copy to my email</label>
           </div>
 
-          <input type="submit" id="submit" value="Submit">
+          <input type="submit" name="submit">
         </fieldset>
       </form>
-    </section>
+    </div>
   </div>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/keywords.js"></script>
 
   <footer>
     <div class="partners">
@@ -247,6 +598,6 @@
     <div class="copyright">
         <b>&copy; 2023 EAAE European Association for Architectural Education</b>
     </div>
-</footer>
+  </footer>
 </body>
 </html>

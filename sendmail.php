@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
     $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port=587;
     $mail->Username="lorenzomarcomin@gmail.com";
-    $mail->Password="byMdan-koxwo3-fycvaf";
+    $mail->Password="";
     $mail->setFrom($from,$name);
     $mail->addAddress($to);
     $mail->Subject=$subject;

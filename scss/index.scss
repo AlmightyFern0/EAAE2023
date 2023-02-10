@@ -92,6 +92,8 @@ button[disabled] {
     margin-left: 15px;
 }
 
+.minifyImg {height: 3rem;}
+
 @media (max-width: 765px) {
     body::-webkit-scrollbar{display: none;}
 
@@ -172,7 +174,7 @@ button[disabled] {
                 .nav-link {
                     text-decoration: none;
                     color: $accentColor;
-                    padding: 1rem;   
+                    padding: 0.75rem;   
                 }
 
                 .disabled {
@@ -303,7 +305,77 @@ button[disabled] {
             .logo-hero {
                 display: block;
                 margin: auto;
-                height: 100%;
+                height: 75%;
+            }
+
+            .firstSection_banner {
+                position: relative;
+                width: 100vw;
+                height: 50px;
+
+                .banner_black {
+                    position: relative;
+                    left: 15%;
+                    background-color: $accentColor;
+                    width: 70%;
+                    height: 40px;
+                    display: flex;
+                    padding: 0;
+                    padding-left: 15px;
+
+                    h2 {
+                        font-size: $fontTiny;
+                        color: $mainColor;
+                        text-transform: uppercase;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        h2 {
+                            font-size: $fontNormal;
+                            transform: translateY(-8px);
+                        }
+                    }
+
+                }
+
+                .banner_white {
+                    position: relative;
+                    left: 15%;
+                    top: -3px;
+                    background-color: $mainColor;
+                    border: 3px solid $accentColor;
+                    width: 70%;
+                    height: 40px;
+                    display: flex;
+                    padding: 0;
+                    padding-left: 15px;
+
+                    h2 {
+                        font-size: $fontTiny;
+                        color: $accentColor;
+                        text-transform: uppercase;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        h2 {
+                            font-size: $fontNormal;
+                            transform: translateY(-8px);
+                        }
+                    }
+                }
+
+                .center {
+                    margin: auto;
+                    transform: translateY(0);
+                }
+
+                @media screen and (min-width: 1200px) {
+                    .center {
+                        margin-bottom: -5px;
+                    }
+                }
+
+                .right {position: absolute; right: 15px;}
             }
         }
 
@@ -400,10 +472,18 @@ button[disabled] {
                     a {color:$accentColor; transition: all 0.2s ease-in-out;}
 
                     a:hover {color: $mainColor;}
+
+                    .link-variant {
+                        color: $mainColor;
+                    }
+
+                    .link-variant:hover {color:$accentColor;}
                 }
 
                 button:hover {
                     a {color: $mainColor;}
+
+                    .link-variant {color:$accentColor;}
                 }
             }
 
@@ -413,8 +493,8 @@ button[disabled] {
                 position: relative;
                 display: flex;
                 flex: 0 0 30vh;
-                height: 40vh;
-                width: 35vh;
+                height: 30vh;
+                width: 30vh;
                 flex-direction: column;
                 background: $mainColor;
                 scroll-snap-align: center;
@@ -423,8 +503,8 @@ button[disabled] {
                 cursor: pointer;
 
                 .image {
-                    height: 35vh;
-                    width: 35vh;
+                    height: 25vh;
+                    width: 30vh;
                     border: 3px solid $accentColor;
                     transform: translateX(-3px) translateY(-3px);
                     background-repeat: no-repeat;
@@ -441,28 +521,21 @@ button[disabled] {
                     height: 35%;
                     padding: 0;
                     display: flex;
-                    flex-direction: row; 
                     align-items: center;
-
+                    justify-content: center;
 
                     h2 {
                         font-size: $fontTiny;
                         width: 66%;
-                        margin-left: 15px;
                         margin-top: 11px;
                         color: $accentColor;
+                        text-align: center;
+                        align-self: center;
                     }
 
                     p {
                         font-size: $fontTiny;
                         color: $accentColor;
-                    }
-
-                    button {
-                        position: absolute;
-                        top: -6px;
-                        right: -3px;
-                        height: calc(50px + 3px);
                     }
                 }
 
@@ -522,6 +595,7 @@ button[disabled] {
             justify-content: center;
             opacity: 0;
             pointer-events: none;
+            z-index: 100000000;
             transition: all 0.2s ease-in-out;
             overflow: scroll;
 
@@ -539,7 +613,11 @@ button[disabled] {
                     b {color: $secondaryColor;}
                 }
 
-                .white-modal-text {color: $mainColor;}
+                .white-modal-text {
+                    color: $mainColor;
+                    
+                    b, i, u {color:$mainColor}
+                }
             }
         }
 
@@ -615,15 +693,22 @@ button[disabled] {
         .news {
             position: relative;
             top:-3px;
+            display: flex;
+            padding-top: 10vh;
             justify-content: center;
             align-items: center;
+            height: 55vh;
         }
 
         .speakers {
             background: $tertiaryColor;
             position: relative;
-            top: -3px;
+            top: -6px;
+            display: flex;
+            padding-top: 10vh;
             justify-content: center;
+            align-items: center;
+            height: 55vh;
         }
 
         .sponsors {
@@ -635,7 +720,7 @@ button[disabled] {
             height: 75vh;
             min-height: 550px;
             position: relative;
-            top: -3px;
+            top: -6px;
 
             a {
                 align-self: center;
@@ -1005,9 +1090,9 @@ footer {
     
     .partners {
         position: relative;
-        top: -6px;
+        top: -9px;
         width: 100vw;
-        height: 80px;
+        height: 100px;
         padding: 20px;
         overflow: hidden;
         display: flex;

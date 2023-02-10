@@ -17,29 +17,6 @@
     <link rel="stylesheet" href="scss/index.css">
 </head>
 <body>
-    <script>
-        const body = document.body;
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const scrollValue = window.pageYOffset
-            if(scrollValue <= 0){
-                body.classList.remove("scrollUp")
-            }
-
-            if(scrollValue > lastScroll && !body.classList.contains("scrollDown")){
-                body.classList.remove("scrollUp")
-                body.classList.add("scrollDown")
-            }
-
-            if(scrollValue < lastScroll && body.classList.contains("scrollDown")){
-                body.classList.remove("scrollDown")
-                body.classList.add("scrollUp")
-            }
-
-            lastScroll = scrollValue;
-        })
-    </script>
-
     <div class="fullOverlay">
         <div class="fullOverlayInner">
             <h1>Hey!</h1>
@@ -54,7 +31,7 @@
     <header class="header">
         <div id="navigation" class="navbar">
             <div class="nav-logo">
-                <a href="#" title="navbar logo">
+                <a href="/index.html" title="navbar logo">
                     <svg class="logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.38583 113.38583">
                         <defs>
                           <style>
@@ -104,14 +81,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/programme.html">Programme</a>
                 </li>
-                <li class="nav-item disabled">
-                    <a class="nav-link disabled" href="#">Credits</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/eaae_ga.html">EAAE GA</a>
                 </li>
-                <!--<li class="nav-item disabled">
-                    <a class="nav-link disabled" href="#">Organization</a>
-                </li>-->
-                <li class="nav-item disabled">
-                    <a class="nav-link disabled" href="#">Venue</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/venue.html">Venue</a>
                 </li>
             </ul>
             <a href="#"><button class="btn-variant btn-nav">Register</button></a>
@@ -125,7 +102,22 @@
 
         <section class="logoFullScreen">
             <img class="logo-hero" src="resources/Logo_full.svg" alt="EAAE 2023 Official Logo">
+        
+            <div class="firstSection_banner">
+                <div class="banner_black">
+                    <h2>eaae annual conference 2023</h2>
+                    <h2 class="right">general assembly</h2>
+                </div>
+
+                <div class="banner_white">
+                    <h2>30.08.23</h2>
+                    <h2 class="center">politecnico di torino</h2>
+                    <h2 class="right">01.09.23</h2>
+                </div>
+            </div>
         </section>
+
+
 
         <!-- Second section -->
 
@@ -140,12 +132,22 @@
                         <button id="open">read more</button>
                     </div>
                 </div>
-                <div class="modal-container modal-yellow" id="modalContainer">
+                <div class="modal-container modal-prompt modal-yellow" id="modalContainer">
                     <div class="modal">
                         <h1>Seeds of architecture: <br> Ways of Teaching</h1>
-                        <p>Architecture as a method and/or as a discipline. Nowadays, there can be a shift in teaching architecture from defining a specific knowledge inside the discipline or a series of methods that can be generalised and exploited for the practice.</p>
-                        <br>
-                        <p>Architecture of the Masters and/or of the topics. Masters overlooked the teaching systems before the 20th; however, topics can be another point of view in validating the system of knowledge transmitted to future generations.</p>
+                        <p>Architecture as a <b><i>method</b></i> and/or as a <b><i>discipline</b></i>. Nowadays, there can be a shift in teaching architecture from defining a specific knowledge inside the discipline or a series of methods that can be generalised and exploited for practice.</p>
+
+                        <p>Architecture of the <b><i>Masters</b></i> and/or of the <b><i>Topics</b></i>. The masters overlooked the teaching systems before the 20th century; from the Modern Movement onward, the transmission of knowledge is more and more focused on topics related to social and human-centered issues.</p>
+                      
+                        <p>In a changing world where global challenges such as climate change, digital innovation or social inequalities are crossing architecture, it is crucial to discuss the possible impact of architectural education in this frame. Different teaching practices question the dichotomies between <b>architecture as a method and/or discipline</b> and between <b>architecture of the Masters and/or of the Topics</b>. The first session explores this issue by referring to one or more of the following possible topics:</p> 
+                          
+                        <p>Is architecture a discipline characterised by a scientific status that can define the borders of practising and teaching architecture? Or is architecture more of a modus operandi that can apply to other fields?</p>
+                        
+                        <p>Is architecture a mindset, a set of soft skills, or a technical discipline in which hard skills are the core of transmissible knowledge?</p>
+                          
+                        <p>What is the meaning of Masters in architecture nowadays? Can they have a role in architectural education, and if so, to which extent?</p>
+                          
+                        <p>How to identify new topics with a pedagogical value for architectural education? Which role can architectural education have in tackling contemporary global challenges? Should architectural education experimentation have a role in identifying new burning issues?</p>
                         <button id="close">close</button>
                     </div>
                 </div>
@@ -158,12 +160,26 @@
                         <button id="open2">read more</button>
                     </div>
                 </div>
-                <div class="modal-container modal-blue" id="modalContainer2">
+                <div class="modal-container modal-prompt modal-blue" id="modalContainer2">
                     <div class="modal">
                         <h1 class="white-modal-text">Roots of Architecture: <br> Ways of Research</h1>
-                        <p class="white-modal-text">Architecture for architects and/or for the community. Who is the final architecture user, and how is this reflected in practice? Is Architecture a discipline or a service? Both points of view lead to a different definition of Architecture that needs to be translated into teaching.</p>
-                        <br>
-                        <p class="white-modal-text">Architecture as avant-garde and/or market-oriented. What is the result? Architecture can be for the market, or architectural schools can open new visions that the market must look at.</p>
+                        <p class="white-modal-text">Architecture for <b><i>architects</b></i> and/or for the <b><i>community</b></i>. Who is the final architecture user, and how is this reflected in practice? Is Architecture a discipline or a service? Both points of view lead to a different definition of Architecture that needs to be translated into teaching.</p>
+
+                        <p class="white-modal-text">Architecture as <b><i>avant-garde</b></i> and/or <b><i>market-oriented</b></i>. What is the result? Architecture can be for the market, or architectural schools can open new visions that the market must look at.</p>
+                        
+                        <p class="white-modal-text">The goals and the targets of architectural action are crucial topics for architectural research. While the social and political dimension of architecture is given, architecture is often asked to comply with market requests ed economic issues. The multiplicity of meanings of the term architecture leads to several ways of setting up and conducting architectural research. </p>
+                        
+                        <p class="white-modal-text">The second session aims to investigate the dichotomies between <b>architecture &apos;for architects&apos; and/or for the community</b> and between <b>architecture as avant-garde and/or market-oriented</b>, referring to one or more of the following possible topics:</p>
+                        
+                        <p class="white-modal-text">How can architectural research contribute to orienting the continued expansion of the discipline’s knowledge base while structuring interrelationships with other disciplines? How can architecture improve its inherent interdisciplinary dimension while safeguarding its specific identity?</p>
+                        
+                        <p class="white-modal-text">How can architectural research have a tangible social impact, and how can it be made substantial for communities?</p>
+                        
+                        <p class="white-modal-text">What is the role of communities outside academia in architectural research? Are they merely a field of experimentation, or can they be involved in conceiving and structuring the research process?</p>
+                        
+                        <p class="white-modal-text">Should architectural research be focused on contemporary burning issues, or should architecture aim at identifying future topics and challenges crucial for societies?</p>
+                        
+                        <p class="white-modal-text">What are the possible roles of design-based research in fostering theoretical findings and ways of thought?</p>
                         <button id="close2">close</button>
                     </div>
                 </div>
@@ -176,12 +192,26 @@
                         <button id="open3">read more</button>
                     </div>
                 </div>
-                <div class="modal-container modal-white" id="modalContainer3">
+                <div class="modal-container modal-prompt modal-white" id="modalContainer3">
                     <div class="modal">
                         <h1>Branches of Architecture: <br> Ways of Practice</h1>
-                        <p>Architecture inside and/or outside the wall. Where is the place for the practice? Architecture can be inside the wall or outside of it; it can build the wall itself or be seen as a theoretical application.</p>
-                        <br>
-                        <p>Architecture disciplinary and/or extra-disciplinary. What does architecture have to face? Architecture can look at itself in the realm of the discipline or look at other knowledge: sociology, economics, ethnography are just examples. Which are the potential of both approaches?</p>
+                        <p>Architecture <b><i>inside</b></i> and/or <b><i>outside</b></i> the wall. Where is the place for the practice? Architecture can be inside the wall or outside of it; it can build the wall itself or be seen as a theoretical application.</p>
+
+                        <p>Architecture <b><i>disciplinary</b></i> and/or <b><i>extra-disciplinary</b></i>. What does architecture have to face? Architecture can look at itself in the realm of the discipline or look at other knowledge: sociology, economics, ethnography are just examples. Which are the potential of both approaches?</p>
+                        
+                        <p>Architecture has long ceased to be the expression of a prince’s will to become, whether the archi-stars’ gesture or the result of a complex process involving many stakeholders and disciplines. In this frame, architecture can seek to define and broaden its specific identity or work to overcome disciplinary boundaries to strengthen collaboration with other professional fields. Besides, contemporary and innovative ways of architecture practice also question the necessary relationship between architecture and constructive matters.</p>
+                        
+                        <p>The third session aims to investigate the dichotomies between <b>architecture inside and/or outside the wall</b> and between <b>disciplinary and/or extra-disciplinary approaches to architecture</b> referring to one or more of the following possible topics:</p>
+                        
+                        <p>Can we only claim for architecture when artefacts  - walls - are the final goal of the design process, or can architecture exist “outside the wall” dealing with processes and outputs unrelated to the built environment?</p>
+                        
+                        <p>Should architecture deal with the construction of artefacts and walls, or should architecture deal with non-tangible applications?</p>
+                        
+                        <p>Which is the role of academia and design-based research in the panorama of professional practice?</p>
+                        
+                        <p>How to set fruitful collaboration between theoretical enquiry on architecture and professional practice routine?</p>
+                        
+                        <p>When we speak about multiple ways of practising architecture nowadays, are we broadening the borders of architecture, or are we dealing with other disciplines “outside” architecture?</p>
                         <button id="close3">close</button>
                     </div>
                 </div>
@@ -225,6 +255,11 @@
                 </div>
 
                 <div class="card-square">
+                    <h2>Abstract submission</h2>
+                    <button><a href="/call_abstracts.html" alt="Schedule">read more</a></button></a>
+                </div>
+
+                <div class="card-square">
                     <h2>PhD Workshop</h2>
                     <button disabled>coming soon</button>
                 </div>
@@ -235,14 +270,9 @@
         
         <section class="speakers boxed">
             <div class="container">
-                <a href="#">
-                    <div class="card-speaker">
-                        <div class="image seppie"></div>
-                        <div class="card-bottom">
-                            <h2>John Doe</h2>
-                        </div>
-                    </div>
-                </a>
+                <div class="card-square">
+                    <h2>Keynote speakers</h2>
+                </div>
 
                 <a href="/falseMirror.html">  
                     <div class="card-speaker">
@@ -326,6 +356,7 @@
             <a href="https://www.eaae.be/" target="noopener"><img class="foot" src="resources/Logo EAAE.png" alt="logo EAAE"></a>
             <a href="https://www.polito.it/en/" target="noopener"><img class="foot" src="resources/Polito logo full [black].png" alt="logo polito"></a>
             <a href="https://www.dad.polito.it/en/" target="noopener"><img class="foot" src="resources/Logo DAD copia.png" alt="logo DAD"></a>
+            <a href="https://www.velux.com/" target="noopener"><img class="foot" src="resources/Velux_logo.svg" alt="logo Velux"></a>
         </div>
         <div class="copyright">
             <b>&copy; 2023 EAAE European Association for Architectural Education</b>
@@ -385,6 +416,30 @@
             modal_Container5.classList.remove("show");
             body.classList.remove("noScroll");
         });
+    </script>
+
+    <!-- Navbar -->
+    <script>
+        const body = document.body;
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollValue = window.pageYOffset
+            if(scrollValue <= 0){
+                body.classList.remove("scrollUp")
+            }
+
+            if(scrollValue > lastScroll && !body.classList.contains("scrollDown")){
+                body.classList.remove("scrollUp")
+                body.classList.add("scrollDown")
+            }
+
+            if(scrollValue < lastScroll && body.classList.contains("scrollDown")){
+                body.classList.remove("scrollDown")
+                body.classList.add("scrollUp")
+            }
+
+            lastScroll = scrollValue;
+        })
     </script>
 </body>
 </html>

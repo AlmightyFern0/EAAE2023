@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 if(isset($_POST['submit'])){
-	$to = "lorenzomarcomin@gmail.com"; // Your email address
+	$to = "s280784@studenti.polito.it"; // Your email address
 	$name = $_POST['name'];
     $surname = $_POST['surname'];
     $affiliation = $_POST['affiliation'];
@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
 	$abstractTitle = $_POST['abstractTitle'];
 	$keywords = $_POST['keywords'];
     $abstract = $_POST['abstract'];
+    $bio = $_POST['bio'];
     $image = $_POST['image'];
     $copyEmail = $_POST['copyEmail'];
 	$subject = "Contact Form Details";
@@ -67,6 +68,10 @@ if(isset($_POST['submit'])){
     </tr>
     <tr>
         <td><strong>Message:</strong></td>
+        <td>".$_POST['bio']."</td>
+    </tr>
+    <tr>
+        <td><strong>Message:</strong></td>
         <td>".$_POST['image']."</td>
     </tr>
 	</table>
@@ -76,16 +81,31 @@ if(isset($_POST['submit'])){
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->SMTPAuth=true;
-    $mail->Host="smtp.gmail.com";
+    $mail->Host="smtp.studenti.polito.it";
     $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port=587;
-    $mail->Username="lorenzomarcomin@gmail.com";
-    $mail->Password="";
+    $mail->Port=465;
+    $mail->Username="s280784@studenti.polito.it";
+    $mail->Password="vexdoz-3bUgke-nurjeq";
     $mail->setFrom($from,$name);
     $mail->addAddress($to);
     $mail->Subject=$subject;
     $mail->Body=$message;
     $mail->send();
+
+    /*
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->SMTPAuth=true;
+    $mail->Host="smtp.gmail.com";
+    $mail->SMTPSecure=PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port=587;
+    $mail->Username="lorenzomarcomin@gmail.com";
+    $mail->Password="byMdan-koxwo3-fycvaf";
+    $mail->setFrom($from,$name);
+    $mail->addAddress($to);
+    $mail->Subject=$subject;
+    $mail->Body=$message;
+    $mail->send();*/
 
     /*
     $subject = "Contact Form Details";

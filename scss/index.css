@@ -77,6 +77,10 @@ button[disabled] {
   margin-left: 15px;
 }
 
+.minifyImg {
+  height: 3rem;
+}
+
 @media (max-width: 765px) {
   body::-webkit-scrollbar {
     display: none;
@@ -185,7 +189,7 @@ button[disabled] {
 .header .navbar .navbar-nav .nav-item .nav-link {
   text-decoration: none;
   color: #000000;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .header .navbar .navbar-nav .nav-item .disabled {
@@ -328,7 +332,88 @@ button[disabled] {
   .main-wrapper .logoFullScreen .logo-hero {
     display: block;
     margin: auto;
-    height: 100%;
+    height: 75%;
+  }
+  .main-wrapper .logoFullScreen .firstSection_banner {
+    position: relative;
+    width: 100vw;
+    height: 50px;
+  }
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_black {
+    position: relative;
+    left: 15%;
+    background-color: #000000;
+    width: 70%;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_black h2 {
+    font-size: 0.8125rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 720px) and (min-width: 1200px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_black h2 {
+    font-size: 1.25rem;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_white {
+    position: relative;
+    left: 15%;
+    top: -3px;
+    background-color: #FFFFFF;
+    border: 3px solid #000000;
+    width: 70%;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_white h2 {
+    font-size: 0.8125rem;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 720px) and (min-width: 1200px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .banner_white h2 {
+    font-size: 1.25rem;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .center {
+    margin: auto;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 720px) and (min-width: 1200px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .center {
+    margin-bottom: -5px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .main-wrapper .logoFullScreen .firstSection_banner .right {
+    position: absolute;
+    right: 15px;
   }
   .main-wrapper .container {
     display: -webkit-box;
@@ -439,8 +524,17 @@ button[disabled] {
   .main-wrapper .container .card-square button a:hover {
     color: #FFFFFF;
   }
+  .main-wrapper .container .card-square button .link-variant {
+    color: #FFFFFF;
+  }
+  .main-wrapper .container .card-square button .link-variant:hover {
+    color: #000000;
+  }
   .main-wrapper .container .card-square button:hover a {
     color: #FFFFFF;
+  }
+  .main-wrapper .container .card-square button:hover .link-variant {
+    color: #000000;
   }
   .main-wrapper .container a {
     -webkit-text-decoration: 0;
@@ -454,8 +548,8 @@ button[disabled] {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30vh;
             flex: 0 0 30vh;
-    height: 40vh;
-    width: 35vh;
+    height: 30vh;
+    width: 30vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -468,8 +562,8 @@ button[disabled] {
     cursor: pointer;
   }
   .main-wrapper .container .card-speaker .image {
-    height: 35vh;
-    width: 35vh;
+    height: 25vh;
+    width: 30vh;
     border: 3px solid #000000;
     -webkit-transform: translateX(-3px) translateY(-3px);
             transform: translateX(-3px) translateY(-3px);
@@ -493,30 +587,26 @@ button[disabled] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main-wrapper .container .card-speaker .card-bottom h2 {
     font-size: 0.8125rem;
     width: 66%;
-    margin-left: 15px;
     margin-top: 11px;
     color: #000000;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .main-wrapper .container .card-speaker .card-bottom p {
     font-size: 0.8125rem;
     color: #000000;
-  }
-  .main-wrapper .container .card-speaker .card-bottom button {
-    position: absolute;
-    top: -6px;
-    right: -3px;
-    height: calc(50px + 3px);
   }
   .main-wrapper .container .card-speaker .falseMirror {
     background-image: url("http://lorenzomarcomin.com/resources/False Mirror Office.jpeg");
@@ -580,6 +670,7 @@ button[disabled] {
             justify-content: center;
     opacity: 0;
     pointer-events: none;
+    z-index: 100000000;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     overflow: scroll;
@@ -598,6 +689,9 @@ button[disabled] {
     color: #0000FF;
   }
   .main-wrapper .modal-container .modal .white-modal-text {
+    color: #FFFFFF;
+  }
+  .main-wrapper .modal-container .modal .white-modal-text b, .main-wrapper .modal-container .modal .white-modal-text i, .main-wrapper .modal-container .modal .white-modal-text u {
     color: #FFFFFF;
   }
   .main-wrapper .modal-prompt {
@@ -692,20 +786,33 @@ button[disabled] {
   .main-wrapper .news {
     position: relative;
     top: -3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 55vh;
   }
   .main-wrapper .speakers {
     background: #FFFF00;
     position: relative;
-    top: -3px;
+    top: -6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 55vh;
   }
   .main-wrapper .sponsors {
     border: 3px solid #000000;
@@ -722,7 +829,7 @@ button[disabled] {
     height: 75vh;
     min-height: 550px;
     position: relative;
-    top: -3px;
+    top: -6px;
   }
   .main-wrapper .sponsors a {
     -ms-flex-item-align: center;
@@ -1066,9 +1173,9 @@ button[disabled] {
 
 footer .partners {
   position: relative;
-  top: -6px;
+  top: -9px;
   width: 100vw;
-  height: 80px;
+  height: 100px;
   padding: 20px;
   overflow: hidden;
   display: -webkit-box;
